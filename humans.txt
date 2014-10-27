@@ -1,0 +1,5 @@
+"Simpul" HTML/PHP/SASS starting template to very quickly get your project off the ground.
+
+It's semi-opinionated, in that it has a basic header/footer setup with how 99% of most modern websites will have them.
+
+Created by @MrWigster, utilising the basic @GetSkeleton CSS framework, adapted to SASS.

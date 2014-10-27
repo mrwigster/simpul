@@ -1,0 +1,38 @@
+.button {
+  transition: all 0.3s ease;
+  color: white;
+  &--border {
+    padding: 0.8em 2em;
+    border: 2px solid #e3e3e3;
+    border-radius: 4px;
+  }
+  &:hover {
+    background: $brand;
+    color: white;
+    border-color: white;
+  }
+  &--dark {
+    padding: 0.8em 2em;
+    background: $brand;
+    color: white;
+    border: 2px solid #e3e3e3;
+    border-radius: 5px;
+    &:hover {
+      background: white;
+      color: $brand;
+      border-color: black;
+    }
+  }
+  &.inline {
+    display: inline-block;
+  }
+}
+.center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+img {
+  max-width: 100%;
+  height: auto !important;
+}

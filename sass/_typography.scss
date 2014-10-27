@@ -1,0 +1,20 @@
+//   Custom Font Face Default Code:
+
+//   @font-face {
+//   font-family: 'FONT_NAME_HERE';
+//   src: url('../font/FONT_NAME_HERE.eot');
+//   src: url('../font/FONT_NAME_HERE.eot?#iefix') format('embedded-opentype'),
+//        url('../font/FONT_NAME_HERE.woff') format('woff'),
+//        url('../font/FONT_NAME_HERE.ttf') format('truetype'),
+//        url('../font/FONT_NAME_HERE.svg#FONT_NAME_HERE') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+body {
+  font-family: $fontFamily;
+  font-weight: normal;
+}
+.bold,h1,h2,h3,h4,h5,h6,strong,b  {
+  font-family: $fontFamily; // Set a $fontFamilyBold variable if you use a seperate font for bold, or font variant etc.
+  font-weight: bold;
+}

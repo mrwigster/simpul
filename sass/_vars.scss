@@ -1,0 +1,46 @@
+// GLOBAL VARIABLES - include your variables here or alter the predefined vars
+
+// Setup your basic variables here, for things like colours etc.
+$dark: #e3e3e3;
+$brand: blue;
+
+// Background vars
+$backgroundColor: #fff; // default background information
+
+// Font vars - Setup your base font size and font family.
+$fontSize: 14px; // default font size. Change here will adjust sizes across the board.
+$fontFamily: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; // default fonts
+$fontColor: #444; // default font color
+
+// heading vars
+$headingFamily: "Georgia", "Times New Roman", serif; // default heading font
+$headingColor: #181818; // default heading color
+
+// Font to be used in Forms
+$formFont: $fontFamily; // default font font
+
+// <a href=""> Link vars
+$linkColor: #333; // default link INERT color
+$linkHoverColor: #000; // default link HOVER color
+$linkDecoration: underline; // default link decoration
+
+
+
+
+
+// You can mostly ignore the below variables, the following settings will work for the majority of projects:
+
+// Grid variables
+$baseWidth:     1100px; // change this to alter the overall maximum width of the grid
+$baseWidthMQ:   1100px; // base width for media query calculations in layout file
+$baseColWidth:    40px; // Changes the grid width calculation
+$baseGutterWidth: 20px;
+$isFluid:         true; // want a fluid grid by default?
+
+// How many columns at most does your site need? 12 is generally the optimal value.
+$baseColCount: 12; // number of cols to generate
+
+// media query dimensions
+$tabletWidth:          768px;
+$mobilePortraitWidth:  300px;
+$mobileLandscapeWidth: 420px;
