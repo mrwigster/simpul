@@ -2,7 +2,7 @@
 
 ## By @MrWigster (alex-wigmore.co.uk) / @trulycode
 
-A pretty simple and very effective combitination of a boilerplate and framework. It's by default got the header/footer/menu includes that 99% of most websites will utilise as well as some basic styling.
+A pretty simple and very effective combination of a boilerplate and framework. By default it has the header/footer/menu includes that 99% of most websites will utilise as well as some basic styling to help you get your project/site/app off the ground very quickly.
 
 Grid system is based upon the @GetSkeleton layout, adapted into a SASS framework.
 
