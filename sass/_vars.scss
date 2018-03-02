@@ -1,46 +1,43 @@
-// GLOBAL VARIABLES - include your variables here or alter the predefined vars
+$brand-main: #75a89f;
+$brand-main-complement: #ebebeb;
 
-// Setup your basic variables here, for things like colours etc.
-$dark: #e3e3e3;
-$brand: blue;
+$brand-secondary: #464646;
+$brand-secondary-complement: #727272;
 
-// Background vars
-$backgroundColor: #fff; // default background information
+$offWhite: #e3e3e3;
+$offBlack: #464646;
 
-// Font vars - Setup your base font size and font family.
-$fontSize: 14px; // default font size. Change here will adjust sizes across the board.
-$fontFamily: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; // default fonts
-$fontColor: #444; // default font color
+// Typography basics
+$contentFonts: 'helvetica neue', arial, sans-serif;
+$contentFontsWeight: 300;
+$headingFonts: 'helvetica neue', arial, sans-serif;
+$headingFontsWeight: 700;
+// Applied to body, sets the basis for all the em/rems on the site
+$baseFontSize: 18px;
 
-// heading vars
-$headingFamily: "Georgia", "Times New Roman", serif; // default heading font
-$headingColor: #181818; // default heading color
+// Breakpoint we consider largest size for a mobile
+$mobile-width: 475px;
+// Minimum breakpoint to consider a tablet
+$tablet-width: 768px;
+// Minimum breakpoint to consider a desktop
+$desktop-width: 1024px;
+// For wide screen
+$wide-width: 1480px;
+// Sets the maximum width a container will go to, we don't want really long lines of text the complete width of a widescreen browser
+$containedWidth: 1024px;
 
-// Font to be used in Forms
-$formFont: $fontFamily; // default font font
-
-// <a href=""> Link vars
-$linkColor: #333; // default link INERT color
-$linkHoverColor: #000; // default link HOVER color
-$linkDecoration: underline; // default link decoration
+// Basic link controls
+$link-color: $brand-main;
+$link-hover-color: $brand-secondary;
+$link-decoration: none;
+$link-hover-decoration: underline;
 
 
+// Flex Layout:
+// Gap/margin between our flex items
+$flexGap: 18px;
 
-
-
-// You can mostly ignore the below variables, the following settings will work for the majority of projects:
-
-// Grid variables
-$baseWidth:     1100px; // change this to alter the overall maximum width of the grid
-$baseWidthMQ:   1100px; // base width for media query calculations in layout file
-$baseColWidth:    40px; // Changes the grid width calculation
-$baseGutterWidth: 20px;
-$isFluid:         true; // want a fluid grid by default?
-
-// How many columns at most does your site need? 12 is generally the optimal value.
-$baseColCount: 12; // number of cols to generate
-
-// media query dimensions
-$tabletWidth:          768px;
-$mobilePortraitWidth:  300px;
-$mobileLandscapeWidth: 420px;
+// Grid Layout:
+// Control the number of columns our grid has, it truly only really works with 12
+$gridColumns: 12;
+$gridGap: $baseFontSize;

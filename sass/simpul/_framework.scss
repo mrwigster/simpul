@@ -1,0 +1,117 @@
+.container {
+  margin: auto;
+  max-width: $containedWidth;
+  @include lessThanDesktop() {
+    padding: 0 0.75em;
+  }
+  @include wide(){
+    max-width: 1440px;
+  }
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .quart {
+    width: calc(25% - #{$flexGap});
+    margin: $flexGap/2;
+    @include lessThanDesktop() {
+      width: calc(50% - #{$flexGap});
+      margin: $flexGap/2;
+    }
+    @include mobile() {
+      width: calc(100% - #{$flexGap});
+      margin: $flexGap/2;
+    }
+  }
+
+  .third {
+    width: calc(33.33% - #{$flexGap});
+    margin: $flexGap/2;
+    @include lessThanTablet() {
+      width: calc(100% - #{$flexGap});
+      margin: $flexGap/2;
+    }
+  }
+
+  .half {
+    width: calc(50% - #{$flexGap});
+    margin: $flexGap/2;
+    @include lessThanDesktop() {
+      width: calc(100% - #{$flexGap});
+      margin: $flexGap/2;
+    }
+  }
+
+  .twothird {
+    width: calc(66.66% - #{$flexGap});
+    margin: $flexGap/2;
+    @include lessThanDesktop() {
+      width: calc(100% - #{$flexGap});
+      margin: $flexGap/2;
+    }
+  }
+
+  .threequart {
+    width: calc(75% - #{$flexGap});
+    margin: $flexGap/2;
+    @include lessThanDesktop() {
+      width: calc(100% - #{$flexGap});
+      margin: $flexGap/2;
+    }
+  }
+
+  .full {
+    width: calc(100% - #{$flexGap});
+    margin: $flexGap/2;
+  }
+}
+
+.grid-wrap {
+  display: grid;
+  flex-wrap: wrap;
+  width: 100%;
+  grid-template-columns: repeat($gridColumns, 1fr);
+  grid-gap: $gridGap;
+  .quart {
+    grid-column: span $gridColumns/4;
+    @include lessThanDesktop() {
+      grid-column: span $gridColumns/2;
+    }
+    @include mobile() {
+      grid-column: span $gridColumns;
+    }
+  }
+
+  .third {
+    grid-column: span $gridColumns/3;
+    @include lessThanTablet() {
+      grid-column: span $gridColumns;
+    }
+  }
+
+  .half {
+    grid-column: span $gridColumns/2;
+    @include lessThanTablet() {
+      grid-column: span $gridColumns;
+    }
+  }
+
+  .twothird {
+    grid-column: span 8;
+    @include lessThanTablet() {
+      grid-column: span $gridColumns;
+    }
+  }
+
+  .threequart {
+    grid-column: span $gridColumns/4*3;
+    @include lessThanTablet() {
+      grid-column: span $gridColumns;
+    }
+  }
+
+  .full {
+    grid-column: span $gridColumns;
+  }
+}

@@ -1,0 +1,58 @@
+footer.site-footer {
+  background-color: $brand-secondary;
+  margin-top: 2em;
+  border-top: 4px solid $brand-secondary-complement;
+  box-shadow: -1px -5px 11px 4px #92929247;
+  padding: 1em 0;
+  .container {
+    max-width: 960px;
+  }
+  .third:nth-child(2) {
+    text-align: center;
+  }
+  .third:last-child {
+    text-align: right;
+    @include lessThanDesktop() {
+      text-align: center;
+    }
+  }
+  .footer-menu {
+    a {
+      display: block;
+      width: 100%;
+      color: white;
+      &:hover {
+        color: $brand-main-complement;
+      }
+      @include mobile() {
+        padding: 0.5em 0;
+      }
+    }
+  }
+  .third {
+    display: flex;
+    flex-wrap: wrap;
+    a.footer-logo {
+      display: block;
+      max-width: 200px;
+      margin: auto;
+    }
+    @include lessThanDesktop() {
+      text-align: center;
+    }
+  }
+  .copyright {
+    width: 100%;
+    font-size: 0.8em;
+    color: white;
+  }
+  .social-icons {
+    width: 100%;
+    @include lessThanDesktop(){
+      margin: 2em 0;
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+  }
+}

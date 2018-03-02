@@ -1,0 +1,90 @@
+body {
+  font-family: $contentFonts;
+  font-weight: $contentFontsWeight;
+  font-size: $baseFontSize;
+  text-rendering: optimizeLegibility;
+  color: $brand-main;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFonts;
+  font-weight: $headingFontsWeight;
+  display: block;
+  margin-bottom: 1em;
+  line-height: 1em;
+  width: 100%;
+}
+h1 {
+  font-size: 4em;
+  @include lessThanTablet() {
+    font-size: 3em;
+  }
+}
+h2 {
+  font-size: 3.5em;
+  @include lessThanTablet() {
+    font-size: 2em;
+  }
+}
+h3 {
+  font-size: 3.2em;
+  @include lessThanTablet() {
+    font-size: 1.8em;
+  }
+}
+h4 {
+  font-size: 3em;
+  @include lessThanTablet() {
+    font-size: 1.6em;
+  }
+}
+h5 {
+  font-size: 2.5em;
+  @include lessThanTablet() {
+    font-size: 1.3em;
+  }
+}
+h6 {
+  font-size: 2em;
+  @include lessThanTablet() {
+    font-size: 1.2em;
+  }
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  text-decoration-skip-ink: auto;
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+p {
+  margin-bottom: 1em;
+  line-height: 1.6em;
+}
+blockquote {
+  border-left: 10px solid $offBlack;
+  margin-left: 0;
+  padding: 1.5em;
+  position: relative;
+  &:after {
+    content: '”';
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 5em;
+    line-height: 1em;
+    transform: rotate(5deg);
+  }
+}
+ul {
+  list-style-type: none;
+  li {
+    .content &:before {
+      content: "\25B3";
+      margin-left: -10px;
+      margin-right: 8px;
+    }
+  }
+}

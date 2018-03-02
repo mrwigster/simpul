@@ -1,0 +1,40 @@
+@charset "UTF-8";
+// "Simpul" SASS / HTML & PHP website starting block that suits the majority of basic websites being built from scratch
+// https://github.com/mrwigster/simpul/
+// By @MrWigster
+
+// Useful variables, brand colours, fonts, breaakpoint widths
+@import "vars";
+
+// The normalise styles by Bootstrap to normalize consistent styles across all browsers and set up some nice baseline standards
+@import "simpul/norm";
+
+// Media query setup
+@import "simpul/mediaq";
+
+// Basic layout and framework structure
+@import "simpul/framework";
+
+// Little elements, such as buttons, icons etc.
+@import "simpul/bits";
+
+// Header of site
+@import "simpul/header";
+
+// Footer of site
+@import "simpul/footer";
+
+// All baseline typography settings
+@import "simpul/typography";
+
+// Basic blog styles
+@import "blog";
+
+.simpul-example-block {
+    background:$offBlack;
+    color: $offWhite;
+    border: 1px solid #e3e3e3;
+    padding: 20px;
+    border-radius: 3px;
+    justify-content: center;
+}
