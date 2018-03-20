@@ -9,14 +9,10 @@
   <?php wp_head(); ?>
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Open+Sans+Condensed:300" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/style.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72068735-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    // Add analytics here
-    // gtag('config', 'UA-#-#');
-  </script>
+  <!-- Google Analytics Here -->
+
+
+  <!-- // Google Analytics Here -->
 </head>
 <body>
 
