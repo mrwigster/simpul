@@ -1,0 +1,21 @@
+// Simpul demo content / delete or re-use:
+.simpul-example-block {
+  background:$offBlack;
+  color: $offWhite;
+  border: 1px solid #e3e3e3;
+  padding: 20px;
+  border-radius: 3px;
+  justify-content: center;
+}
+.simpul-section--title {
+  width: 100%;
+  display: block;
+}
+.simpul-section {
+  padding: 4em 0;
+  background: white;
+}
+.simpul-section-odd {
+  @extend .simpul-section;
+  background: #e3e3e3;
+}

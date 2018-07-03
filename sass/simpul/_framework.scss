@@ -2,20 +2,21 @@
   margin: auto;
   max-width: $containedWidth;
   @include lessThanDesktop() {
-    padding: 0 0.75em;
+    padding: 0 $flexGap/2;
   }
   @include wide(){
     max-width: 1440px;
   }
 }
+
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  // width: 100%;
   .quart {
     width: calc(25% - #{$flexGap});
     margin: $flexGap/2;
-    @include lessThanDesktop() {
+    @include lessThanTablet() {
       width: calc(50% - #{$flexGap});
       margin: $flexGap/2;
     }
@@ -55,7 +56,7 @@
   .threequart {
     width: calc(75% - #{$flexGap});
     margin: $flexGap/2;
-    @include lessThanDesktop() {
+    @include lessThanTablet() {
       width: calc(100% - #{$flexGap});
       margin: $flexGap/2;
     }
@@ -65,17 +66,51 @@
     width: calc(100% - #{$flexGap});
     margin: $flexGap/2;
   }
+  // offsets
+  .offset-quart {
+    margin-left: calc(25% + #{$flexGap} / 2);
+    @include mobile() {
+      margin-left: $flexGap / 2;
+    }
+  }
+  .offset-third {
+    margin-left: calc(33.33% + #{$flexGap} / 2);
+    @include mobile() {
+      margin-left: $flexGap / 2;
+    }
+  }
+  .offset-half {
+    margin-left: calc(50% + #{$flexGap} / 2);
+    @include mobile() {
+      margin-left: $flexGap / 2;
+    }
+  }
+  .offset-twothird {
+    margin-left: calc(66.66% + #{$flexGap} / 2);
+    @include mobile() {
+      margin-left: $flexGap / 2;
+    }
+  }
+  .offset-threequart {
+    margin-left: calc(75% + #{$flexGap} / 2);
+    @include mobile() {
+      margin-left: $flexGap / 2;
+    }
+  }
 }
 
 .grid-wrap {
   display: grid;
-  flex-wrap: wrap;
   width: 100%;
   grid-template-columns: repeat($gridColumns, 1fr);
   grid-gap: $gridGap;
+  padding: $flexGap / 2;
+  // padding: $flexGap/2;
   .quart {
+    width: unset;
     grid-column: span $gridColumns/4;
-    @include lessThanDesktop() {
+    margin: unset;
+    @include lessThanTablet() {
       grid-column: span $gridColumns/2;
     }
     @include mobile() {
@@ -84,34 +119,77 @@
   }
 
   .third {
+    width: unset;
     grid-column: span $gridColumns/3;
+    margin: unset;
     @include lessThanTablet() {
       grid-column: span $gridColumns;
     }
   }
 
   .half {
+    width: unset;
     grid-column: span $gridColumns/2;
-    @include lessThanTablet() {
+    margin: unset;
+    @include lessThanDesktop() {
       grid-column: span $gridColumns;
     }
   }
 
   .twothird {
+    width: unset;
     grid-column: span 8;
-    @include lessThanTablet() {
+    margin: unset;
+    @include lessThanDesktop() {
       grid-column: span $gridColumns;
     }
   }
 
   .threequart {
+    width: unset;
     grid-column: span $gridColumns/4*3;
+    margin: unset;
     @include lessThanTablet() {
       grid-column: span $gridColumns;
     }
   }
 
   .full {
+    width: unset;
     grid-column: span $gridColumns;
+    margin: unset;
+  }
+  // offsets
+  .quart.offset-quart {
+    grid-column: span 6;
+    margin-left: calc((50% + #{$flexGap} / 2));
+    @include mobile() {
+      margin-left: 0;
+    }
+  }
+  .third.offset-third {
+    grid-column: span 8;
+    @include mobile() {
+      margin-left: 0;
+    }
+    margin-left: calc(50% + #{$flexGap} / 2);
+  }
+  .offset-half {
+    margin-left: calc(50% + #{$flexGap} / 2);
+    @include mobile() {
+      margin-left: 0;
+    }
+  }
+  .offset-twothird {
+    margin-left: calc(66.66% + #{$flexGap} / 2);
+    @include mobile() {
+      margin-left: 0;
+    }
+  }
+  .offset-threequart {
+    margin-left: calc(75% + #{$flexGap} / 2);
+    @include mobile() {
+      margin-left: 0;
+    }
   }
 }

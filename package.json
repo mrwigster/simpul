@@ -1,21 +1,22 @@
 {
-  "name": "simpulframework",
-  "version": "1.0.0",
-  "description": "simpulFrameWork",
-  "main": "index.php",
-  "scripts": {
-    "test": "test"
-  },
+  "name": "simpul",
+  "version": "1.1.0",
+  "description": "simpul - a great template and framework to begin most typical modern PHP websites | By @MrWigster (alex-wigmore.co.uk)",
   "author": "mrwigster <https://alex-wigmore.co.uk>",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-connect-php": "^1.0.3",
-    "gulp-cssnano": "^2.1.2",
     "gulp-ruby-sass": "^3.0.0",
-    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
   }
 }

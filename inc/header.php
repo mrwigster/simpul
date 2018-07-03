@@ -1,28 +1,27 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/inc/config.php'); ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="robots" content="all">
   <link rel="profile" href="http://gmpg.org/xfn/11">
+  <link href="https://fonts.googleapis.com/css?family=Heebo:700|PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-
-  <title>Title Here</title>
-  <meta name="description" content="">
+  <title><?php echo isset($metaTitle) ? $metaTitle : $defaultMetaTitle; ?></title>
+  <?php echo isset($metaDescription) ? "<meta name='description' content='$metaDescription'>" : NULL ; ?>
 
 </head>
 <body>
 <header class="site-header">
   <div class="flex-wrap container">
-    <a href="/" class="logo half">
-      <h1>
-        Company Logo
-        <!-- <h1><img src="" alt=""></h1> -->
-      </h1>
+    <a href="/" class="logo">
+      <img src="/img/simpul-logo.svg" alt="<?php echo $prettyName; ?> logo">
     </a>
-    <?php include ($_SERVER["DOCUMENT_ROOT"].'/inc/menu.php'); ?>
+    <nav class="menu" id="site-navigation" role="navigation">
+      <?php include ($_SERVER["DOCUMENT_ROOT"].'/inc/menu.php'); ?>
+    </nav>
   </div>
 </header>

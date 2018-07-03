@@ -12,88 +12,35 @@ header.site-header {
   width: 100%;
   z-index: 100;
   background: white;
-  background: #ffffffc7;
   .flex-wrap {
     align-items: center;
   }
   .logo {
     max-width: 100%;
+    display: flex;
+    align-items: flex-start;
     img, svg {
-      width: 100%;
       display: block;
-    }
-    h1 {
-      font-size: 1em;
-      margin: 0.3em auto;
-      @include lessThanDesktop() {
-        text-align: center;
-      }
+      // Set the height of your logo
+      height: 50px;
+      width: auto;
+      margin-left: $flexGap / 2;
     }
   }
   .menu {
     margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     a {
       padding: 0 20px;
       font-size: 1.1em;
+      &:last-of-type {
+        padding-right: 0;
+        margin-right: $flexGap / 2;
+      }
     }
     @include lessThanTablet() {
       justify-content: center;
     }
-  }
-}
-
-.simpul-hero {
-  background-color: $brand-secondary;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  padding: 15em 0 10em;
-  position: relative;
-  text-shadow: 1px 2px 8px #d6d6d63b;
-  @include mobile() {
-    padding: 3em 0;
-  }
-  @include wide() {
-    min-height: 800px;
-  }
-  .hero-content {
-    display: inline-block;
-    background: $brand-main-complement;
-    padding: 2em;
-    border-radius: 3px;
-    box-shadow: 0px 12px 18px -8px #5555550a;
-    @include mobile(){
-      padding: 0.5em;
-    }
-    h1 {
-      margin-top: 0;
-    }
-    h1, h3 {
-      color: $brand-secondary;
-    }
-    .btn {
-      font-size: 3em;
-      margin-bottom: 0;
-    }
-  }
-  &.home {
-    background-image: url(/img/example.jpeg);
-  }
-  h1 {
-    margin-bottom: 0.5em;
-  }
-  h1, h2 {
-    color: white;
-  }
-  h3 {
-    font-size: 2em;
-  }
-  h4 {
-    color: white;
-    font-size: 2em;
   }
 }

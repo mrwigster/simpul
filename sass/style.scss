@@ -15,8 +15,20 @@
 // Basic layout and framework structure
 @import "simpul/framework";
 
-// Little elements, such as buttons, icons etc.
-@import "simpul/bits";
+// Basic polyfill to fall grid layout down to grid
+@import "simpul/polyfill";
+
+// Social Icons
+@import "simpul/social";
+
+// "hero" style element/large header
+@import "simpul/hero";
+
+// Form related elements.
+@import "simpul/form";
+
+// Button related elements.
+@import "simpul/button";
 
 // Header of site
 @import "simpul/header";
@@ -27,14 +39,11 @@
 // All baseline typography settings
 @import "simpul/typography";
 
+// Long form content baseline (based on lots of research that narrow long form is better)
+@import "simpul/content";
+
+// Homepage styles
+@import "home";
+
 // Basic blog styles
 @import "blog";
-
-.simpul-example-block {
-    background:$offBlack;
-    color: $offWhite;
-    border: 1px solid #e3e3e3;
-    padding: 20px;
-    border-radius: 3px;
-    justify-content: center;
-}

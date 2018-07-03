@@ -7,27 +7,28 @@ var gulp = require('gulp'),
   sass = require('gulp-ruby-sass'),
   browserSync = require('browser-sync');
 
-var input = './sass/**/*.scss';
 var output = './css';
 var sassOptions = {
   errLogToConsole: true,
-  outputStyle: 'compressed'
+  outputStyle: 'compressed',
+  style: 'compressed',
+  sourcemap:true
 };
 var autoprefixerOptions = {
   browsers: ['last 2 versions']
 };
 gulp.task('styles', function () {
-  return sass('sass/style.scss', { style: 'compressed', sourcemap:true })
+  return sass('sass/style.scss', sassOptions)
     .pipe(sourcemaps.init())
     // .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))
     // .pipe(cssnano())
     .pipe(sourcemaps.write())
     .pipe(sourcemaps.write('maps', {
-			includeContent: false,
-			sourceRoot: 'source'
-		}))
-    .pipe(gulp.dest('css'))
+      includeContent: false,
+      sourceRoot: 'source'
+    }))
+    .pipe(gulp.dest(output))
     .pipe(browserSync.stream({ match: '**/*.css' }));
 });
 

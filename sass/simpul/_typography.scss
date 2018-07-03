@@ -1,7 +1,9 @@
+html, body {
+  font-size: $baseFontSize;
+}
 body {
   font-family: $contentFonts;
   font-weight: $contentFontsWeight;
-  font-size: $baseFontSize;
   text-rendering: optimizeLegibility;
   color: $brand-main;
 }
@@ -12,42 +14,41 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1em;
   line-height: 1em;
   width: 100%;
+  line-height: 1em;
+  margin: 1rem 0;
 }
 h1 {
-  font-size: 4em;
+  font-size: 3em;
   @include lessThanTablet() {
-    font-size: 3em;
+    font-size: 2.3em;
   }
 }
 h2 {
-  font-size: 3.5em;
+  font-size: 2.4em;
   @include lessThanTablet() {
     font-size: 2em;
   }
 }
 h3 {
-  font-size: 3.2em;
+  font-size: 1.8em;
   @include lessThanTablet() {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
 }
 h4 {
-  font-size: 3em;
-  @include lessThanTablet() {
-    font-size: 1.6em;
-  }
-}
-h5 {
-  font-size: 2.5em;
+  font-size: 1.4em;
   @include lessThanTablet() {
     font-size: 1.3em;
   }
 }
-h6 {
-  font-size: 2em;
+h5 {
+  font-size: 1.2em;
   @include lessThanTablet() {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
+}
+h6 {
+  font-size: 1em;
 }
 
 a {
@@ -79,12 +80,24 @@ blockquote {
   }
 }
 ul {
-  list-style-type: none;
-  li {
-    .content &:before {
-      content: "\25B3";
-      margin-left: -10px;
-      margin-right: 8px;
-    }
-  }
+
+}
+ol {
+
+}
+mark {
+  background: #cc924f21;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin: 0 2px;
+}
+p code {
+  background: $offWhite;
+  display: inline-block;
+  border: 1px dashed $offWhite;
+  border-radius: 6px;
+  padding: 0 10px;
+}
+pre {
+  overflow: scroll;
 }
