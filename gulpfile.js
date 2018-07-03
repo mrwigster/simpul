@@ -8,17 +8,15 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync');
 
 var output = './css';
-var sassOptions = {
-  errLogToConsole: true,
-  outputStyle: 'compressed',
-  style: 'compressed',
-  sourcemap:true
-};
+// var sassOptions = {
+//   errLogToConsole: true,
+//   outputStyle: 'compressed'
+// };
 var autoprefixerOptions = {
   browsers: ['last 2 versions']
 };
 gulp.task('styles', function () {
-  return sass('sass/style.scss', sassOptions)
+  return sass('sass/style.scss', { style: 'compressed', sourcemap:true })
     .pipe(sourcemaps.init())
     // .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))
