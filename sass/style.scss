@@ -8,9 +8,16 @@
 
 // The normalise styles by Bootstrap to normalize consistent styles across all browsers and set up some nice baseline standards
 @import "simpul/norm";
-
 // Media query setup
 @import "simpul/mediaq";
+// Useful little bits
+@import "simpul/utils";
+
+// A simple accordion
+@import "simpul/accordion";
+
+// A simple slider
+@import "simpul/slider";
 
 // Basic layout and framework structure
 @import "simpul/framework";
@@ -42,8 +49,11 @@
 // Long form content baseline (based on lots of research that narrow long form is better)
 @import "simpul/content";
 
-// Homepage styles
-@import "home";
+// Simple card element
+@import "simpul/card";
+
+// Homepage/Demo styles
+@import "demo";
 
 // Basic blog styles
 @import "blog";

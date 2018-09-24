@@ -8,7 +8,10 @@
     max-width: 1440px;
   }
 }
-
+.full {
+  width: calc(100% - #{$flexGap});
+  margin: $flexGap/2;
+}
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;

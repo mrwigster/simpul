@@ -9,7 +9,7 @@
   <meta name="robots" content="all">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link href="https://fonts.googleapis.com/css?family=Heebo:700|PT+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/style.css">
   <title><?php echo isset($metaTitle) ? $metaTitle : $defaultMetaTitle; ?></title>
   <?php echo isset($metaDescription) ? "<meta name='description' content='$metaDescription'>" : NULL ; ?>
 

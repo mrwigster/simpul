@@ -7,13 +7,27 @@ body {
   position: relative;
   width: 100%;
 }
+.header-icons {
+  display: flex;
+}
+.header-search, .header-contact {
+  img {
+    max-width: 20px;
+    display: block;
+  }
+}
+
 header.site-header {
-  padding: 1em 0;
+  padding: 1.3em;
   width: 100%;
   z-index: 100;
   background: white;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #e3e3e3;
   .flex-wrap {
     align-items: center;
+    justify-content: space-between;
   }
   .logo {
     max-width: 100%;
@@ -21,19 +35,14 @@ header.site-header {
     align-items: flex-start;
     img, svg {
       display: block;
-      // Set the height of your logo
-      height: 50px;
+      height: 20px;
       width: auto;
-      margin-left: $flexGap / 2;
+      max-width: 100%;
     }
   }
   .menu {
-    margin-left: auto;
-    justify-content: flex-end;
-    align-items: center;
     a {
       padding: 0 20px;
-      font-size: 1.1em;
       &:last-of-type {
         padding-right: 0;
         margin-right: $flexGap / 2;
@@ -41,6 +50,61 @@ header.site-header {
     }
     @include lessThanTablet() {
       justify-content: center;
+    }
+  }
+}
+#hamburger-menu {
+  z-index: 1000;
+}
+.mobile-toggle {
+  display: flex;
+  align-items: center;
+  appearance: none;
+  touch-action: manipulation;
+  background-color: none;
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  padding: 8px 0;
+  &__icon {
+    width: 25px;
+    height: 2px;
+    background: $brand-main;
+    display: block;
+    transition: height .1s cubic-bezier(.19, 1, .22, 1) .3s;
+    &::after,
+    &::before {
+      content: " ";
+      width: 25px;
+      height: 2px;
+      background: $brand-main;
+      display: block;
+      position: relative;
+      top: 6px;
+      transition: top .3s cubic-bezier(.19, 1, .22, 1) .3s, transform .3s cubic-bezier(.19, 1, .22, 1);
+    }
+
+    &::before {
+      top: -8px;
+    }
+  }
+
+  &.active &__icon {
+    height: 0;
+    &::after {
+      top: -2px;
+      transform: rotate(45deg);
+      transition: top .3s cubic-bezier(.19, 1, .22, 1) 0s, transform .3s cubic-bezier(.19, 1, .22, 1) .3s;
+    }
+    &::before {
+      top: 0;
+      transform: rotate(-45deg);
+      transition: top .3s cubic-bezier(.19, 1, .22, 1) 0s, transform .3s cubic-bezier(.19, 1, .22, 1) .3s;
     }
   }
 }

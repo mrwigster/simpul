@@ -1,5 +1,5 @@
 <?php
-$metaTitle = 'My website | Simpul';
+$metaTitle = 'My website | simpul';
 $metaDescription = 'My Site built using the simpul framework/starter template';
 include($_SERVER['DOCUMENT_ROOT'].'/inc/header.php');
 ?>
@@ -7,9 +7,9 @@ include($_SERVER['DOCUMENT_ROOT'].'/inc/header.php');
 <section class="simpul-hero home">
   <div class="container">
     <div class="hero-content">
-      <h1>A nice big hero</h1>
-      <h2>With accompanying text</h2>
-      <a href="/" class="btn">One clear CTA</a>
+      <h1>simpul</h1>
+      <h2>Super clean, lightweight starting point for website developers</h2>
+      <a href="#" class="btn">One clear CTA</a>
     </div>
   </div>
   <aside class="background-video">
@@ -22,22 +22,28 @@ include($_SERVER['DOCUMENT_ROOT'].'/inc/header.php');
 <div class="blog-list-page">
   <div class="container flex-wrap">
     <div class="third card">
-      <h4><a href="/">A simple card</a></h4>
-      <img src="/img/example.jpeg" alt="an example image">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero magni dicta, ut ducimus eaque saepe officia ratione est assumenda natus praesentium aperiam! Ad, debitis molestias enim sint aliquid hic.</p>
-      <a class="btn" href="/">Keep Reading &rarr;</a>
+      <a href="./blog.php">
+        <h4>A card example</h4>
+        <img src="/img/example.jpeg" alt="an example image">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero magni dicta, ut ducimus eaque saepe officia ratione est assumenda natus praesentium aperiam! Ad, debitis molestias enim sint aliquid hic.</p>
+        <span class="btn" href="/">Keep Reading &rarr;</span>
+      </a>
     </div>
     <div class="third card">
-      <h4><a href="/">A simple card</a></h4>
-      <img src="/img/example.jpeg" alt="an example image">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero magni dicta, ut ducimus eaque saepe officia ratione est assumenda natus praesentium aperiam! Ad, debitis molestias enim sint aliquid hic.</p>
-      <a class="btn" href="/">Keep Reading &rarr;</a>
+      <a href="./blog.php">
+        <h4>A card example</h4>
+        <img src="/img/example.jpeg" alt="an example image">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero magni dicta, ut ducimus eaque saepe officia ratione est assumenda natus praesentium aperiam! Ad, debitis molestias enim sint aliquid hic.</p>
+        <span class="btn" href="/">Keep Reading &rarr;</span>
+      </a>
     </div>
     <div class="third card">
-      <h4><a href="/">A simple card</a></h4>
-      <img src="/img/example.jpeg" alt="an example image">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero magni dicta, ut ducimus eaque saepe officia ratione est assumenda natus praesentium aperiam! Ad, debitis molestias enim sint aliquid hic.</p>
-      <a class="btn" href="/">Keep Reading &rarr;</a>
+      <a href="./blog.php">
+        <h4>A card example</h4>
+        <img src="/img/example.jpeg" alt="an example image">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero magni dicta, ut ducimus eaque saepe officia ratione est assumenda natus praesentium aperiam! Ad, debitis molestias enim sint aliquid hic.</p>
+        <span class="btn" href="/">Keep Reading &rarr;</span>
+      </a>
     </div>
   </div>
 </div>
@@ -51,7 +57,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/inc/header.php');
   <h4>heading h4</h4>
   <h5>heading h5</h5>
   <h6>heading h6</h6>
-  <a>Anchor </a>
+  <a href="#">Anchor </a>
   <em>Emphasis </em>
   <small>Small </small>
   <strong>Strong </strong>
@@ -100,18 +106,22 @@ include($_SERVER['DOCUMENT_ROOT'].'/inc/header.php');
 <section class="simpul-section head-for-grid">
   <div class="container">
   <code class="simpul-section--title">The simpul flex/grid-wrap system:</code>
-  <h3>No floats!</h3>
-  <strong>It's 2018!</strong>
-  <i>Simpul doesn't use any <code>float</code>'s for layout at all, only relying on flex and/or grid!</i>
-  <div id="switchFlexGrid" data-current="flex">Switch Flex | Grid</div>
+  <h5>No floats—It's <?php echo date('Y'); ?>!</h5>
+  <i>Simpul doesn't use any type of  <code>float</code> for layout at all, only relying on flex and/or grid!</i>
+  <p>Below is an example of the simpul flex/grid system. Switch the button below and you should notice hardly anything changes.<br>That's because we've managed to cleverly create a structure that works and sizes the same way in both flex and grid based layouts!</p>
+  <div id="switchFlexGrid" data-current="flex">Switch: <span class="demo-flex-switcher flex">Flex</span><span class="demo-flex-switcher grid">Grid</span></span></div>
   </div>
 </section>
 
 <section class="simpul-section-odd">
-  <div class="flex-wrap" id="gridExample">
+  <div class="flex-wrap flex-grid-switching" id="gridExample">
+    <div class="simpul-example-block quart">.quart</div>
+    <div class="simpul-example-block quart">.quart</div>
+    <div class="simpul-example-block quart">.quart</div>
     <div class="simpul-example-block quart">.quart</div>
     <div class="simpul-example-block quart">.quart</div>
     <div class="simpul-example-block quart offset-quart">.quart.offset-quart</div>
+    <div class="simpul-example-block quart">.quart</div>
     <div class="simpul-example-block third">.third</div>
     <div class="simpul-example-block third">.third</div>
     <div class="simpul-example-block third">.third</div>
@@ -132,21 +142,25 @@ include($_SERVER['DOCUMENT_ROOT'].'/inc/header.php');
   <code class="simpul-section--title">A code block:</code>
   <pre>
 <code><?php echo htmlentities('<div class="flex-wrap" id="gridExample">
-<div class="simpul-example-block quart">.quart</div>
-<div class="simpul-example-block quart">.quart</div>
-<div class="simpul-example-block quart offset-quart">.quart.offset-quart</div>
-<div class="simpul-example-block third">.third</div>
-<div class="simpul-example-block third">.third</div>
-<div class="simpul-example-block third">.third</div>
-<div class="simpul-example-block third">.third</div>
-<div class="simpul-example-block third offset-third">.third.offset-third</div>
-<div class="simpul-example-block half">.half</div>
-<div class="simpul-example-block half">.half</div>
-<div class="simpul-example-block twothird">.twothird</div>
-<div class="simpul-example-block third">.third</div>
-<div class="simpul-example-block threequart">.threequart</div>
-<div class="simpul-example-block quart">.quart</div>
-<div class="simpul-example-block full">.full</div>
+  <div class="simpul-example-block quart">.quart</div>
+  <div class="simpul-example-block quart">.quart</div>
+  <div class="simpul-example-block quart">.quart</div>
+  <div class="simpul-example-block quart">.quart</div>
+  <div class="simpul-example-block quart">.quart</div>
+  <div class="simpul-example-block quart offset-quart">.quart.offset-quart</div>
+  <div class="simpul-example-block quart">.quart</div>
+  <div class="simpul-example-block third">.third</div>
+  <div class="simpul-example-block third">.third</div>
+  <div class="simpul-example-block third">.third</div>
+  <div class="simpul-example-block third">.third</div>
+  <div class="simpul-example-block third offset-third">.third.offset-third</div>
+  <div class="simpul-example-block half">.half</div>
+  <div class="simpul-example-block half">.half</div>
+  <div class="simpul-example-block twothird">.twothird</div>
+  <div class="simpul-example-block third">.third</div>
+  <div class="simpul-example-block threequart">.threequart</div>
+  <div class="simpul-example-block quart">.quart</div>
+  <div class="simpul-example-block full">.full</div>
 </div>'); ?>
 </code>
 </pre>

@@ -4,12 +4,11 @@ $metaDescription = 'The simpul blog layout';
 include($_SERVER['DOCUMENT_ROOT'].'/inc/header.php');
 ?>
 
-
 <header class="blog-single">
   <div class="container">
     <h1>A simpul blog post</h1>
     <div class="meta-info">
-      <span>Posted by: <img class="author-picture" src="/img/example.jpeg">simpul on <?php echo date('d, M, Y'); ?></span>
+      <span>Posted by:<img class="author-picture" src="/img/alex-simpul.jpg">simpul on <?php echo date('d, M, Y'); ?></span>
     </div>
   </div>
 </header>

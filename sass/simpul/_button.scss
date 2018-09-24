@@ -4,26 +4,33 @@ button, .button, .btn {
   appearance: none;
   cursor: pointer;
   background: $brand-main;
-  border: 2px solid $brand-main;
-  border-radius: 3px;
-  padding: 0.3em 0.8em;
+  border: 1px solid $brand-main;
+  border-radius: 30px;
+  padding: 0.6rem 1.8rem;
   color: $brand-main-complement;
   transition: all 0.3s ease;
   display: inline-block;
+  margin-top: 1em;
   margin-bottom: 1em;
   text-align: center;
+  font-size: 0.75em;
   white-space: nowrap;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
   &:hover {
-    background-color: $brand-secondary;
-    border: 2px solid $brand-secondary;
-    color: $brand-secondary-complement;
+    // background-color: $offBlack;
+    border: 1px solid $offBlack;
+    color: $offBlack;
     text-decoration: none;
+    background: black;
+    color: white;
   }
   &-outline {
     @extend .btn;
     background: none;
     color: $brand-main;
-    border: 2px solid $brand-main;
+    border: 1px solid #585858;
   }
 }
 input[type='submit'] {

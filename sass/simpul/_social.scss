@@ -1,23 +1,8 @@
-.social-icons {
+.socials {
   a {
-    width: 35px;
-    display: inline-block;
-    margin: 0 10px;
-    &:hover {
-      svg path, .ig-svg .circ {
-        fill: $brand-secondary-complement;
-        stroke: $brand-secondary-complement;
-      }
-      .ig-svg g {
-        // fill: $brand-main-complement;
-        stroke: $brand-secondary-complement;
-      }
-    }
-  }
-  svg path, .ig-svg .circ {
-    fill: $brand-main;
-  }
-  .ig-svg g {
-    stroke: $brand-main;
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin: 0.1em 0;
   }
 }

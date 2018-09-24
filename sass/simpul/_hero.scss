@@ -1,11 +1,13 @@
 .simpul-hero {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   padding: 8em 0 10em;
   position: relative;
+  min-height: 700px;
   @include mobile() {
     padding: 3em 0;
+    min-height: 40vh;
   }
   @include wide() {
     min-height: 800px;

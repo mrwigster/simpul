@@ -10,32 +10,9 @@
     margin-top: -180px;
     @include wide(){
       margin-top: -152px;
-
     }
     @include lessThanTablet() {
       margin-top: 0;
-    }
-  }
-  p {
-    position: relative;
-    padding: 0 1em;
-    margin: 1em 0 0;
-  }
-  .blog-list-item {
-    padding: 10px;
-  }
-  .btn {
-    margin: 1em 1em 0;
-    text-align: center;
-  }
-  .card {
-    background: white;
-    border-radius: 3px;
-    padding: 1rem 0;
-    h4 {
-      padding: 0 1em;
-      font-size: 1.5em;
-      margin: 0 auto 1rem;
     }
   }
 }
@@ -66,7 +43,7 @@
 header.blog-single {
   background: $offBlack;
   color: $offWhite;
-  padding: 1em 0 4em;
+  padding: 4rem 0;
   margin-bottom: 2em;
 }
 .author-picture {

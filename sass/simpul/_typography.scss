@@ -11,11 +11,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $headingFonts;
   font-weight: $headingFontsWeight;
   display: block;
-  margin-bottom: 1em;
   line-height: 1em;
   width: 100%;
   line-height: 1em;
-  margin: 1rem 0;
+  margin: 0 0 1em 0;
 }
 h1 {
   font-size: 3em;
@@ -61,6 +60,7 @@ a {
   }
 }
 p {
+  margin-top: 0;
   margin-bottom: 1em;
   line-height: 1.6em;
 }
@@ -79,11 +79,8 @@ blockquote {
     transform: rotate(5deg);
   }
 }
-ul {
-
-}
-ol {
-
+ul, ol {
+  font-size: 1rem;
 }
 mark {
   background: #cc924f21;
@@ -99,5 +96,14 @@ p code {
   padding: 0 10px;
 }
 pre {
-  overflow: scroll;
+  code {
+    padding: 1rem;
+    display: block;
+    background: $brand-main;
+    border-radius: 3px;
+    border-top: 10px solid $brand-secondary;
+    font-size: 20px;
+    overflow: scroll;
+    color: white;
+  }
 }

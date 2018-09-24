@@ -1,52 +1,59 @@
 var gulp = require('gulp'),
-  // cssnano = require('gulp-cssnano'),
-  // postcss = require('gulp-postcss'),
-  autoprefixer = require('gulp-autoprefixer'),
-  sourcemaps = require('gulp-sourcemaps'),
+  sass = require('gulp-sass'),
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  cssnano = require('cssnano'),
   connect = require('gulp-connect-php'),
-  sass = require('gulp-ruby-sass'),
-  browserSync = require('browser-sync');
+  sourcemaps = require('gulp-sourcemaps'),
+  browserSync = require('browser-sync').create();
 
-var output = './css';
-// var sassOptions = {
-//   errLogToConsole: true,
-//   outputStyle: 'compressed'
-// };
-var autoprefixerOptions = {
-  browsers: ['last 2 versions']
-};
-gulp.task('styles', function () {
-  return sass('sass/style.scss', { style: 'compressed', sourcemap:true })
+var paths = {
+  styles: {
+      // By using styles/**/*.scss we're telling gulp to check all folders for any sass file
+      src: 'sass/**/*.scss',
+      // Saving to root of site/project (this works well if you're building WP themes)
+      dest: './'
+      // Use this if you prefer a css folder
+      // dest: './css/'
+  }
+
+}
+function style() {
+  return gulp.src('sass/style.scss')
     .pipe(sourcemaps.init())
-    // .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(autoprefixer(autoprefixerOptions))
-    // .pipe(cssnano())
+    .pipe(sass()).on('error', sass.logError)
+    .pipe(postcss([
+        autoprefixer({grid: true}),
+        cssnano()
+    ]))
     .pipe(sourcemaps.write())
-    .pipe(sourcemaps.write('maps', {
-      includeContent: false,
-      sourceRoot: 'source'
-    }))
-    .pipe(gulp.dest(output))
-    .pipe(browserSync.stream({ match: '**/*.css' }));
-});
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(browserSync.stream())
+}
 
 
+function reload(){
+  browserSync.reload()
+}
 
-gulp.task('connect-sync', function () {
-  connect.server({}, function () {
-    browserSync({
-      proxy: '127.0.0.1:8000'
+function watch(){
+  connect.server({
+    port: 8888
+  }, function (){
+    browserSync.init({
+      proxy: 'http://localhost:8888/'
+      // Use this to proxy a localhost (EG if you're using [l/m]amp)
+      // proxy: 'dev.mysite'
     });
   });
-});
-
-
-
-gulp.task('watch', function () {
-  gulp.watch("sass/**", ['styles']);
-  gulp.watch(['js/**/*.js', '*.html', '**/*.php']).on('change', browserSync.reload);
-});
-
-gulp.task('default', ['styles', 'connect-sync'], function () {
-  gulp.start('watch');
-});
+  gulp.watch(paths.styles.src, style)
+  style();
+  var codeFileWatcher = gulp.watch(['**/*.html','**/*.php']);
+  codeFileWatcher.on('change', function(path, stats) {
+    console.log('Code File ' + path + ' was changed, running tasks...');
+    reload();
+  });
+}
+// Don't forget to expose the task!
+exports.watch = watch
+exports.style = style

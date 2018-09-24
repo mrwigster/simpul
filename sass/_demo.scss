@@ -1,0 +1,52 @@
+// Simpul demo content / delete or re-use:
+.simpul-example-block {
+  background:$offBlack;
+  color: $offWhite;
+  border: 1px solid #e3e3e3;
+  padding: 20px;
+  border-radius: 3px;
+  justify-content: center;
+}
+.simpul-section--title {
+  width: 100%;
+  display: block;
+}
+.simpul-section {
+  padding: 4em 0;
+  background: white;
+}
+.simpul-section-odd {
+  @extend .simpul-section;
+  background: #e3e3e3;
+}
+#switchFlexGrid {
+  text-align: center;
+  margin-bottom: -40px;
+  &[data-current="grid"] {
+    .grid {
+      background-color: darken($brand-main, 10);
+    }
+    .flex {
+      background: $brand-main;
+    }
+  }
+}
+.demo-flex-switcher {
+  display: inline-block;
+  padding: 1rem;
+  background: $brand-main;
+  color: white;
+  cursor: pointer;
+  &.flex {
+    border-radius: 20px 0 0 20px;
+    border-right: 1px solid $brand-secondary;
+    background-color: darken($brand-main, 10);
+  }
+  &.grid {
+    border-radius: 0 20px 20px 0;
+  }
+}
+#gridExample {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
