@@ -1,9 +1,9 @@
 .card {
   background: white;
   border-radius: 3px;
+  transition: all 0.5s ease;
   &:hover {
     text-decoration: none;
-    transition: all 0.5s ease;
     transform: scale(1.015);
   }
   > a {
