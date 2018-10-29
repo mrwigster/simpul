@@ -30,7 +30,7 @@ button, .button, .btn {
     @extend .btn;
     background: none;
     color: $brand-main;
-    border: 1px solid #585858;
+    border: 1px solid $brand-main;
   }
 }
 input[type='submit'] {
