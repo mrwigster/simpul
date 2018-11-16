@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="robots" content="all">
-  <link rel="profile" href="http://gmpg.org/xfn/11">
   <link href="https://fonts.googleapis.com/css?family=Heebo:700|PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <title><?php echo isset($metaTitle) ? $metaTitle : $defaultMetaTitle; ?></title>
