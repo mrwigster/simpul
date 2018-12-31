@@ -17,14 +17,13 @@
       <h2>Third Column</h2>
       <?php include ($_SERVER["DOCUMENT_ROOT"].'/inc/socials.php'); ?>
       <div class="copyright">
-        Copyright <?php echo $prettyName. ' ' .date('Y'); ?>
+        Copyright <?php echo $prettyName . ' ' . date('Y'); ?>
       </div>
     </div>
 
   </div>
 </footer>
 
-<script src="/js/demo.js"></script>
-<script src="/js/main.js"></script>
+<script src="/assets/js/main.min.js"></script>
 </body>
 </html>

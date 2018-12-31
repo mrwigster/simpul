@@ -23,7 +23,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/inc/header.php');
   <div class="container flex-wrap">
     <div class="third card">
       <a href="./blog.php">
-        <h4>A card example</h4>
+        <h4 class="card-title">A card example</h4>
         <img src="/img/example.jpeg" alt="an example image">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero magni dicta, ut ducimus eaque saepe officia ratione est assumenda natus praesentium aperiam! Ad, debitis molestias enim sint aliquid hic.</p>
         <span class="btn" href="/">Keep Reading &rarr;</span>
@@ -31,7 +31,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/inc/header.php');
     </div>
     <div class="third card">
       <a href="./blog.php">
-        <h4>A card example</h4>
+        <h4 class="card-title">A card example</h4>
         <img src="/img/example.jpeg" alt="an example image">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero magni dicta, ut ducimus eaque saepe officia ratione est assumenda natus praesentium aperiam! Ad, debitis molestias enim sint aliquid hic.</p>
         <span class="btn" href="/">Keep Reading &rarr;</span>
@@ -39,7 +39,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/inc/header.php');
     </div>
     <div class="third card">
       <a href="./blog.php">
-        <h4>A card example</h4>
+        <h4 class="card-title">A card example</h4>
         <img src="/img/example.jpeg" alt="an example image">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero magni dicta, ut ducimus eaque saepe officia ratione est assumenda natus praesentium aperiam! Ad, debitis molestias enim sint aliquid hic.</p>
         <span class="btn" href="/">Keep Reading &rarr;</span>

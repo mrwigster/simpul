@@ -1,0 +1,80 @@
+// Blog archive/listing page
+.blog-list-page {
+  padding: 4em 0;
+  position: relative;
+  background: -moz-linear-gradient(
+    top,
+    $brand-main-complement 0%,
+    #fff 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    $brand-main-complement 0%,
+    #fff 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    $brand-main-complement 0%,
+    #fff 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-main-complement', endColorstr='#fff',GradientType=0 ); /* IE6-9 */
+  .container {
+    margin-top: -180px;
+    @include wide() {
+      margin-top: -152px;
+    }
+    @include lessThanTablet() {
+      margin-top: 0;
+    }
+  }
+}
+
+.pagination {
+  list-style: none;
+  margin: 2.5em auto 0;
+  width: 100%;
+  text-align: center;
+  li {
+    display: inline-block;
+  }
+  a {
+    padding: 3px 10px;
+    border: 2px solid $brand-main;
+    border-radius: 3px;
+    margin: 0 5px;
+    &:hover {
+      background: rgba($brand-main, 0.5);
+      color: $brand-main;
+    }
+  }
+  .current a {
+    background: $brand-main;
+    color: white;
+  }
+}
+header.blog-single {
+  background: $offBlack;
+  color: $offWhite;
+  padding: 4rem 0;
+  margin-bottom: 2em;
+}
+.author-picture {
+  max-width: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+.content article {
+  margin: 2em auto;
+}
+// Single blog page
+.single-blog-item {
+  padding: 4em 0;
+}
+.simpul-hero.single-blog {
+  padding: 25em 0 0;
+  .container {
+    background: $brand-main;
+    padding: 2em;
+  }
+}

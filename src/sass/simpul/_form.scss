@@ -1,0 +1,33 @@
+form {
+  fieldset {
+    padding: 0.5em;
+  }
+  input,
+  textarea,
+  select {
+    border: 1px solid #cbced2;
+    border-radius: 6px;
+    padding: 0.5em;
+    margin-bottom: 0.3em;
+    box-shadow: 1px 7px 6px -5px #efefef;
+    display: block;
+    width: 100%;
+  }
+  // Aligns the submit button to right of form, possibly subjective:
+  input[type="submit"].half {
+    margin-left: auto;
+  }
+  input[type="checkbox"] {
+    width: auto;
+  }
+  input[disabled] {
+    cursor: not-allowed;
+    background: #e3e3e3;
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: inline;
+    vertical-align: middle;
+    margin-right: $flexGap / 2;
+  }
+}
