@@ -21,7 +21,7 @@
   height: 1px;
   width: 100%;
   width: calc(100% - #{$flexGap});
-  background-color: #e7e7e7;
+  background-color: $offWhite;
   margin: 6rem auto;
 }
 .inline-text-btn {

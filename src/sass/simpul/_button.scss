@@ -22,11 +22,10 @@ button,
   justify-content: center;
   &:hover {
     // background-color: $offBlack;
-    border: 1px solid $offBlack;
-    color: $offBlack;
+    color: lighten($brand-main-complement, 10%);
+    background: lighten($brand-main, 10%);
+    border: 1px solid lighten($brand-main, 10%);
     text-decoration: none;
-    background: black;
-    color: white;
   }
   &-outline {
     @extend .btn;

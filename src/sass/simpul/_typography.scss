@@ -1,12 +1,13 @@
 html,
 body {
   font-size: $baseFontSize;
+  color: $fontColor;
 }
 body {
   font-family: $contentFonts;
   font-weight: $contentFontsWeight;
-  text-rendering: optimizeLegibility;
   color: $brand-main;
+  text-rendering: optimizeLegibility;
 }
 h1,
 h2,
@@ -17,7 +18,6 @@ h6 {
   font-family: $headingFonts;
   font-weight: $headingFontsWeight;
   display: block;
-  line-height: 1em;
   width: 100%;
   line-height: 1em;
   margin: 0 0 1em 0;

@@ -2,31 +2,6 @@
 .blog-list-page {
   padding: 4em 0;
   position: relative;
-  background: -moz-linear-gradient(
-    top,
-    $brand-main-complement 0%,
-    #fff 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    $brand-main-complement 0%,
-    #fff 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    $brand-main-complement 0%,
-    #fff 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-main-complement', endColorstr='#fff',GradientType=0 ); /* IE6-9 */
-  .container {
-    margin-top: -180px;
-    @include wide() {
-      margin-top: -152px;
-    }
-    @include lessThanTablet() {
-      margin-top: 0;
-    }
-  }
 }
 
 .pagination {
@@ -34,6 +9,9 @@
   margin: 2.5em auto 0;
   width: 100%;
   text-align: center;
+  ul {
+    padding: 0;
+  }
   li {
     display: inline-block;
   }
@@ -52,8 +30,10 @@
     color: white;
   }
 }
+
+// Single Blog Page
 header.blog-single {
-  background: $offBlack;
+  background: $brand-main;
   color: $offWhite;
   padding: 4rem 0;
   margin-bottom: 2em;
@@ -66,15 +46,4 @@ header.blog-single {
 }
 .content article {
   margin: 2em auto;
-}
-// Single blog page
-.single-blog-item {
-  padding: 4em 0;
-}
-.simpul-hero.single-blog {
-  padding: 25em 0 0;
-  .container {
-    background: $brand-main;
-    padding: 2em;
-  }
 }

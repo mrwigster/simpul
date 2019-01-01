@@ -46,17 +46,34 @@ function styles() {
     .pipe(browserSync.stream())
 }
 
-
-function reload(){
-  browserSync.reload()
+function scripts() {
+  return gulp.src(paths.scripts.src, { sourcemaps: true })
+    // .pipe(babel())
+    // .pipe(uglify())
+    .pipe(concat('main.min.js'))
+    .pipe(gulp.dest(paths.scripts.dest));
 }
 
-function scripts() {
+function productionStyles() {
+  return gulp.src(paths.styles.src)
+    .pipe(sass()).on('error', sass.logError)
+    .pipe(postcss([
+        autoprefixer({grid: true}),
+        cssnano()
+    ]))
+    .pipe(gulp.dest(paths.styles.dest))
+}
+
+function productionScripts() {
   return gulp.src(paths.scripts.src, { sourcemaps: true })
     .pipe(babel())
     .pipe(uglify())
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest(paths.scripts.dest));
+}
+
+function reload(){
+  browserSync.reload()
 }
 
 function watch(){
@@ -77,14 +94,14 @@ function watch(){
     reload();
   });
 }
-var build = gulp.series(clean, gulp.parallel(styles, scripts));
+var production = gulp.series(clean, gulp.parallel(productionStyles, productionScripts));
 // Don't forget to expose the task!
 exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watch = watch;
-exports.build = build;
+exports.production = production;
 /*
  * Define default task that can be called by just running `gulp` from cli
  */
-exports.default = build;
+exports.default = production;

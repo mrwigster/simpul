@@ -3,19 +3,8 @@ html {
 }
 body {
   background: white;
-  color: $offBlack;
   position: relative;
   width: 100%;
-}
-.header-icons {
-  display: flex;
-}
-.header-search,
-.header-contact {
-  img {
-    max-width: 20px;
-    display: block;
-  }
 }
 
 header.site-header {

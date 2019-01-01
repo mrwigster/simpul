@@ -15,7 +15,6 @@
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
-  // width: 100%;
   .quart {
     width: calc(25% - #{$flexGap});
     margin: $flexGap/2;

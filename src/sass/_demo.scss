@@ -19,6 +19,24 @@
   @extend .simpul-section;
   background: #e3e3e3;
 }
+.card-blocks {
+  padding: 4em 0;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    $brand-main-complement 0%,
+    #fff 100%
+  );
+  .container {
+    margin-top: -180px;
+    @include wide() {
+      margin-top: -152px;
+    }
+    @include lessThanTablet() {
+      margin-top: 0;
+    }
+  }
+}
 #switchFlexGrid {
   text-align: center;
   margin-bottom: -40px;
