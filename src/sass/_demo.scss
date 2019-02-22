@@ -22,11 +22,7 @@
 .card-blocks {
   padding: 4em 0;
   position: relative;
-  background: linear-gradient(
-    to bottom,
-    $brand-main-complement 0%,
-    #fff 100%
-  );
+  background: linear-gradient(to bottom, $brand-main-complement 0%, #fff 100%);
   .container {
     margin-top: -180px;
     @include wide() {
