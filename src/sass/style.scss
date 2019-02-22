@@ -8,8 +8,10 @@
 
 // The normalise styles by Bootstrap to normalize consistent styles across all browsers and set up some nice baseline standards
 @import "simpul/norm";
+
 // Media query setup
 @import "simpul/mediaq";
+
 // Useful little bits
 @import "simpul/utils";
 
@@ -52,8 +54,9 @@
 // Simple card element
 @import "simpul/card";
 
-// Homepage/Demo styles
-@import "demo";
-
 // Basic blog styles
 @import "blog";
+
+// Homepage/Demo styles
+// Delete or re:use
+@import "demo";
