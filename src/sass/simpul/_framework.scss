@@ -107,7 +107,6 @@
   grid-template-columns: repeat($gridColumns, 1fr);
   grid-gap: $gridGap;
   padding: $flexGap / 2;
-  // padding: $flexGap/2;
   .quart {
     width: unset;
     grid-column: span $gridColumns/4;
