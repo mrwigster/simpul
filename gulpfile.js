@@ -58,7 +58,7 @@ function productionStyles() {
   return gulp.src(paths.styles.src)
     .pipe(sass()).on('error', sass.logError)
     .pipe(postcss([
-        autoprefixer({grid: true}),
+      autoprefixer('last 2 versions', { grid: true }),
         cssnano()
     ]))
     .pipe(gulp.dest(paths.styles.dest))
