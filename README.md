@@ -13,4 +13,4 @@ It features both flex AND grid for CSS structuring.
 **Important** things to change when you start:
 * src/sass/_vars.scss : Change the variables here to suit your needs. Eg, update the font-families, $brand colour etc
 * inc/config.php : Change the variables here.
-* Add Google Analytics ID into the inc/header.php section.
+* Optional: Add Google Analytics ID into the inc/header.php section.

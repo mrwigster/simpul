@@ -38,7 +38,8 @@ function styles() {
     .pipe(sourcemaps.init())
     .pipe(sass()).on('error', sass.logError)
     .pipe(postcss([
-        autoprefixer({grid: true}),
+        autoprefixer({grid: true,
+          browsers: ['last 2 version']}),
         cssnano()
     ]))
     .pipe(sourcemaps.write())
@@ -104,4 +105,4 @@ exports.production = production;
 /*
  * Define default task that can be called by just running `gulp` from cli
  */
-exports.default = production;
+exports.default = watch;
