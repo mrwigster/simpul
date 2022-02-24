@@ -16,13 +16,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
 <main class="blog-list-page">
   <div class="container flex-wrap">
     <?php for ($i = 0; $i < 6; $i++) { ?>
-    <div class="half blog-list-item">
-      <h4 class="blog-list-item-title">A blog-list-item example</h4>
-      <img src="/img/example.jpeg" alt="an example image">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero magni dicta, ut ducimus eaque saepe
-        officia ratione est assumenda natus praesentium aperiam! Ad, debitis molestias enim sint aliquid hic.</p>
-      <a class="btn" href="/single.php">Keep Reading &rarr;</a>
-    </div>
+      <div class="half blog-list-item">
+        <h4 class="blog-list-item-title">A blog-list-item example</h4>
+        <img src="/img/example.jpeg" alt="an example image">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero magni dicta, ut ducimus eaque saepe
+          officia ratione est assumenda natus praesentium aperiam! Ad, debitis molestias enim sint aliquid hic.</p>
+        <a class="btn" href="/single.php">Keep Reading &rarr;</a>
+      </div>
     <?php } ?>
   </div>
   <div class="pagination">

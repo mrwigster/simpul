@@ -9,8 +9,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
     <h1>A simpul blog post</h1>
     <div class="meta-info">
       <span>Posted by:<img class="author-picture" src="/img/alex-simpul.jpg">simpul on <?php echo date(
-              'dS F Y'
-            ); ?></span>
+                                                                                          'dS F Y'
+                                                                                        ); ?></span>
     </div>
   </div>
 </header>

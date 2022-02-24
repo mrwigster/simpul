@@ -58,7 +58,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
         <div class="third">
             <p>Total deployed size:<br>
                 <strong>css:</strong> 19kb<br>
-                <strong>JS:</strong> 20kb</p>
+                <strong>JS:</strong> 20kb
+            </p>
         </div>
         <div class="third">
             <p>Utlising a simple code and build structure of: gulp & sass. with gulp handling auto minification, babel, simple PHP server, browser-sync and more!</p>
@@ -235,29 +236,29 @@ include $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
 </section>
 
 <script>
-const switcher = document.getElementById("switchFlexGrid");
-// The grid/column example.
-const gridExample = document.getElementById("gridExample");
+    const switcher = document.getElementById("switchFlexGrid");
+    // The grid/column example.
+    const gridExample = document.getElementById("gridExample");
 
-switcher.addEventListener("click", function() {
-    if (switcher.getAttribute("data-current") == "flex") {
-        switcher.setAttribute("data-current", "grid");
-        gridExample.classList.remove("flex-wrap");
-        gridExample.classList.add("grid-wrap");
-        gridExample.style.opacity = 0;
-        setTimeout(() => {
-            gridExample.style.opacity = 1;
-        }, 150);
-    } else {
-        switcher.setAttribute("data-current", "flex");
-        gridExample.classList.remove("grid-wrap");
-        gridExample.classList.add("flex-wrap");
-        gridExample.style.opacity = 0;
-        setTimeout(() => {
-            gridExample.style.opacity = 1;
-        }, 150);
-    }
-});
+    switcher.addEventListener("click", function() {
+        if (switcher.getAttribute("data-current") == "flex") {
+            switcher.setAttribute("data-current", "grid");
+            gridExample.classList.remove("flex-wrap");
+            gridExample.classList.add("grid-wrap");
+            gridExample.style.opacity = 0;
+            setTimeout(() => {
+                gridExample.style.opacity = 1;
+            }, 150);
+        } else {
+            switcher.setAttribute("data-current", "flex");
+            gridExample.classList.remove("grid-wrap");
+            gridExample.classList.add("flex-wrap");
+            gridExample.style.opacity = 0;
+            setTimeout(() => {
+                gridExample.style.opacity = 1;
+            }, 150);
+        }
+    });
 </script>
 
 

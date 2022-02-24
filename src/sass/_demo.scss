@@ -1,66 +1,73 @@
 // Simpul demo content / delete or re-use:
 .simpul-example-block {
-  background: $offBlack;
-  color: $offWhite;
-  border: 1px solid #e3e3e3;
-  padding: 20px;
-  border-radius: 3px;
-  justify-content: center;
+    background: $offBlack;
+    color: $offWhite;
+    border: 1px solid #e3e3e3;
+    padding: 20px;
+    border-radius: 3px;
+    justify-content: center;
 }
+
 .simpul-section--title {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }
+
 .simpul-section {
-  padding: 4em 0;
-  background: white;
+    padding: 4em 0;
+    background: white;
 }
+
 .simpul-section-odd {
-  @extend .simpul-section;
-  background: #e3e3e3;
+    @extend .simpul-section;
+    background: #e3e3e3;
 }
+
 .card-blocks {
-  padding: 4em 0;
-  position: relative;
-  background: linear-gradient(to bottom, $brand-main-complement 0%, #fff 100%);
-  .container {
-    margin-top: -180px;
-    @include wide() {
-      margin-top: -152px;
+    padding: 4em 0;
+    position: relative;
+    background: linear-gradient(to bottom, $brand-main-complement 0%, #fff 100%);
+    .container {
+        margin-top: -180px;
+        @include wide() {
+            margin-top: -152px;
+        }
+        @include lessThanTablet() {
+            margin-top: 0;
+        }
     }
-    @include lessThanTablet() {
-      margin-top: 0;
-    }
-  }
 }
+
 #switchFlexGrid {
-  text-align: center;
-  margin-bottom: -40px;
-  &[data-current="grid"] {
-    .grid {
-      background-color: darken($brand-main, 10);
+    text-align: center;
+    margin-bottom: -40px;
+    &[data-current="grid"] {
+        .grid {
+            background-color: darken($brand-main, 10);
+        }
+        .flex {
+            background: $brand-main;
+        }
     }
-    .flex {
-      background: $brand-main;
-    }
-  }
 }
+
 .demo-flex-switcher {
-  display: inline-block;
-  padding: 1rem;
-  background: $brand-main;
-  color: white;
-  cursor: pointer;
-  &.flex {
-    border-radius: 20px 0 0 20px;
-    border-right: 1px solid $brand-secondary;
-    background-color: darken($brand-main, 10);
-  }
-  &.grid {
-    border-radius: 0 20px 20px 0;
-  }
+    display: inline-block;
+    padding: 1rem;
+    background: $brand-main;
+    color: white;
+    cursor: pointer;
+    &.flex {
+        border-radius: 20px 0 0 20px;
+        border-right: 1px solid $brand-secondary;
+        background-color: darken($brand-main, 10);
+    }
+    &.grid {
+        border-radius: 0 20px 20px 0;
+    }
 }
+
 #gridExample {
-  opacity: 1;
-  transition: opacity 0.2s ease;
+    opacity: 1;
+    transition: opacity 0.2s ease;
 }

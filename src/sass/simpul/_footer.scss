@@ -1,67 +1,67 @@
 footer.site-footer {
-  background-color: $brand-main;
-  color: $brand-secondary;
-  margin-top: 2rem;
-  padding: 3rem 0;
-  font-size: 1rem;
-  a {
-    display: block;
-    width: 100%;
-    color: $offWhite;
-    margin: 0 0 0.8em;
-    &:hover {
-      color: white;
+    background-color: $brand-main;
+    color: $brand-secondary;
+    margin-top: 2rem;
+    padding: 3rem 0;
+    font-size: 1rem;
+    a {
+        display: block;
+        width: 100%;
+        color: $offWhite;
+        margin: 0 0 0.8em;
+        &:hover {
+            color: white;
+        }
+        @include mobile() {
+            padding: 0.5em 0;
+        }
     }
-    @include mobile() {
-      padding: 0.5em 0;
+    p {
+        color: $offWhite;
+        margin: 0;
+        width: 100%;
     }
-  }
-  p {
-    color: $offWhite;
-    margin: 0;
-    width: 100%;
-  }
-  h2 {
-    font-size: 1.2rem;
-    margin: 0 0 1rem 0;
-    color: $offWhite;
-  }
-  .footer-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    a.logo {
-      display: block;
-      max-width: 200px;
-      @include lessThanTablet() {
-        margin: auto;
-      }
+    h2 {
+        font-size: 1.2rem;
+        margin: 0 0 1rem 0;
+        color: $offWhite;
     }
-    @include lessThanTablet() {
-      text-align: center;
+    .footer-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        a.logo {
+            display: block;
+            max-width: 200px;
+            @include lessThanTablet() {
+                margin: auto;
+            }
+        }
+        @include lessThanTablet() {
+            text-align: center;
+        }
     }
-  }
-  .newsletter {
-    input {
-      background: $brand-main;
-      border: none;
-      border-bottom: 1px solid $brand-main-complement;
-      width: 100%;
-      margin-top: 1em;
-      padding: 0.5em 0;
-      font-size: 1em;
-      color: $brand-main-complement;
-      &:focus {
-        outline: none;
-      }
+    .newsletter {
+        input {
+            background: $brand-main;
+            border: none;
+            border-bottom: 1px solid $brand-main-complement;
+            width: 100%;
+            margin-top: 1em;
+            padding: 0.5em 0;
+            font-size: 1em;
+            color: $brand-main-complement;
+            &:focus {
+                outline: none;
+            }
+        }
     }
-  }
-  .copyright {
-    width: 100%;
-    font-size: 0.8em;
-    color: darken($offWhite, 20);
-  }
-  .social-icons {
-    width: 100%;
-  }
+    .copyright {
+        width: 100%;
+        font-size: 0.8em;
+        color: darken($offWhite, 20);
+    }
+    .social-icons {
+        width: 100%;
+    }
 }

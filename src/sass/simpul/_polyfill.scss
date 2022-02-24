@@ -1,7 +1,7 @@
 @supports not (display: grid) {
-  .grid-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-  }
+    .grid-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 }

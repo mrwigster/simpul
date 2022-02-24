@@ -1,22 +1,22 @@
 $brand-main: #003a42;
 // brand-main-complement should contrast well against brand-main (Eg, text on buttons).
 $brand-main-complement: #ebebeb;
-
 $brand-secondary: #464646;
 $brand-secondary-complement: #ffffff;
-
 $offWhite: #e3e3e3;
 $offBlack: #464646;
-
 // Typography basics
 $fontColor: #000000;
-$contentFonts: "PT Sans", arial, sans-serif;
+$contentFonts: "PT Sans",
+arial,
+sans-serif;
 $contentFontsWeight: 400;
-$headingFonts: "Heebo", arial, sans-serif;
+$headingFonts: "Heebo",
+arial,
+sans-serif;
 $headingFontsWeight: 700;
 // Applied to body, sets the basis for all the em/rems on the site
 $baseFontSize: 18px;
-
 // Breakpoint we consider largest size for a mobile
 $mobile-width: 475px;
 // Minimum breakpoint to consider a tablet
@@ -27,17 +27,14 @@ $desktop-width: 1024px;
 $wide-width: 1480px;
 // Sets the maximum width a container will go to, we don't want really long lines of text the complete width of a widescreen browser
 $containedWidth: 1024px;
-
 // Basic link controls
 $link-color: $brand-main;
 $link-hover-color: $brand-secondary;
 $link-decoration: none;
 $link-hover-decoration: underline;
-
 // Flex Layout:
 // Gap/margin between our flex items
 $flexGap: 18px;
-
 // Grid Layout:
 // Control the number of columns our grid has, it truly only really works with 12
 $gridColumns: 12;

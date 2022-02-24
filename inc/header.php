@@ -6,16 +6,15 @@
   <meta charset="UTF-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="robots" content="all">
   <link href="https://fonts.googleapis.com/css?family=Heebo:700|PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <title><?php echo isset($metaTitle)
-      ? $metaTitle
-      : $defaultMetaTitle; ?></title>
+            ? $metaTitle
+            : $defaultMetaTitle; ?></title>
   <?php echo isset($metaDescription)
-      ? "<meta name='description' content='$metaDescription'>"
-      : null; ?>
+    ? "<meta name='description' content='$metaDescription'>"
+    : null; ?>
 
 </head>
 

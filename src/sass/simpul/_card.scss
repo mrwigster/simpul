@@ -1,35 +1,35 @@
 .card {
-  background: white;
-  border-radius: 3px;
-  transition: all 0.5s ease;
-  &:hover {
-    text-decoration: none;
-    transform: scale(1.015);
-  }
-  > a {
-    display: block;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.5s ease;
     &:hover {
-      text-decoration: none;
+        text-decoration: none;
+        transform: scale(1.015);
     }
-    > * {
-      padding: 1rem;
+    >a {
+        display: block;
+        &:hover {
+            text-decoration: none;
+        }
+        >* {
+            padding: 1rem;
+        }
+        >img {
+            padding: 0;
+            margin-bottom: 1em;
+        }
     }
-    > img {
-      padding: 0;
-      margin-bottom: 1em;
+    .card-title {
+        font-size: 1.5em;
+        margin: 0 auto;
     }
-  }
-  .card-title {
-    font-size: 1.5em;
-    margin: 0 auto;
-  }
-  p {
-    position: relative;
-    padding: 0 1em;
-    margin: 0 0 1em 0;
-  }
-  .btn {
-    padding: 0.6rem 1.8rem;
-    margin: 0 0 1rem 1rem;
-  }
+    p {
+        position: relative;
+        padding: 0 1em;
+        margin: 0 0 1em 0;
+    }
+    .btn {
+        padding: 0.6rem 1.8rem;
+        margin: 0 0 1rem 1rem;
+    }
 }

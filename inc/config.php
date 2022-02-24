@@ -1,15 +1,15 @@
 <?php
 // full URL
-$siteUrl = 'https://alex-wigmore.co.uk/';
+$siteUrl = 'https://guwii.com/';
 // Name of website/company
 $prettyName = 'simpul';
 
 // List social profiles here:
 $socials = array(
-  "facebook" => 'alex.wigmore',
-  "instagram" => 'mrwigster',
-  "twitter" => 'mrwigster',
-  "youtube" => 'https://www.youtube.com/user/wiggyster/'
+  "facebook" => 'guwii',
+  "instagram" => 'guwiidigital',
+  "twitter" => 'guwiidigital',
+  "youtube" => 'https://www.youtube.com/guwii'
 );
 
 // If a page doesn't have the meta title set, it will fallback to:

@@ -1,40 +1,41 @@
 button,
 .button,
 .btn {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  background: $brand-main;
-  border: 1px solid $brand-main;
-  border-radius: 30px;
-  padding: 0.6rem 1.8rem;
-  color: $brand-main-complement;
-  transition: all 0.3s ease;
-  display: inline-block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  text-align: center;
-  font-size: 1em;
-  white-space: nowrap;
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  &:hover {
-    // background-color: $offBlack;
-    color: lighten($brand-main-complement, 10%);
-    background: lighten($brand-main, 10%);
-    border: 1px solid lighten($brand-main, 10%);
-    text-decoration: none;
-  }
-  &-outline {
-    @extend .btn;
-    background: none;
-    color: $brand-main;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: $brand-main;
     border: 1px solid $brand-main;
-  }
+    border-radius: 30px;
+    padding: 0.6rem 1.8rem;
+    color: $brand-main-complement;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 1em;
+    white-space: nowrap;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    &:hover {
+        // background-color: $offBlack;
+        color: lighten($brand-main-complement, 10%);
+        background: lighten($brand-main, 10%);
+        border: 1px solid lighten($brand-main, 10%);
+        text-decoration: none;
+    }
+    &-outline {
+        @extend .btn;
+        background: none;
+        color: $brand-main;
+        border: 1px solid $brand-main;
+    }
 }
+
 input[type="submit"] {
-  @extend .btn;
-  margin-bottom: 0;
+    @extend .btn;
+    margin-bottom: 0;
 }
