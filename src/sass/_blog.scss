@@ -1,12 +1,12 @@
 // Blog archive/listing page
 .blog-list-page {
-    padding: 4em 0;
+    padding: 4rem 0;
     position: relative;
 }
 
 .pagination {
     list-style: none;
-    margin: 2.5em auto 0;
+    margin: 2.5rem auto 0;
     width: 100%;
     text-align: center;
     ul {
@@ -17,23 +17,23 @@
     }
     a {
         padding: 3px 10px;
-        border: 2px solid $brand-main;
+        border: 2px solid $brandMain;
         border-radius: 3px;
         margin: 0 5px;
         &:hover {
-            background: rgba($brand-main, 0.5);
-            color: $brand-main;
+            background: rgba($brandMain, 0.5);
+            color: $brandMain;
         }
     }
     .current a {
-        background: $brand-main;
+        background: $brandMain;
         color: white;
     }
 }
 
 // Single Blog Page
 header.blog-single {
-    background: $brand-main;
+    background: $brandMain;
     color: $offWhite;
     padding: 4rem 0;
     margin-bottom: 2em;
@@ -121,7 +121,7 @@ header.blog-single {
         }
     }
     a.inline-btn {
-        background: $brand-secondary;
+        background: $brandSecondary;
         text-decoration: none;
         padding: 0.3em 0.6em;
         display: inline-block;

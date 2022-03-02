@@ -1,8 +1,8 @@
-$brand-main: #003a42;
-// brand-main-complement should contrast well against brand-main (Eg, text on buttons).
-$brand-main-complement: #ebebeb;
-$brand-secondary: #464646;
-$brand-secondary-complement: #ffffff;
+$brandMain: #003a42;
+// brandMain-complement should contrast well against brandMain (Eg, text on buttons).
+$brandMainComplement: #ebebeb;
+$brandSecondary: #464646;
+$brandSecondaryComplement: #ffffff;
 $offWhite: #e3e3e3;
 $offBlack: #464646;
 // Typography basics
@@ -27,11 +27,12 @@ $desktop-width: 1024px;
 $wide-width: 1480px;
 // Sets the maximum width a container will go to, we don't want really long lines of text the complete width of a widescreen browser
 $containedWidth: 1024px;
+$constrainContainedWidth: 1024px;
 // Basic link controls
-$link-color: $brand-main;
-$link-hover-color: $brand-secondary;
-$link-decoration: none;
-$link-hover-decoration: underline;
+$linkColor: $brandMain;
+$linkHoverColor: $brandSecondary;
+$linkDecoration: none;
+$linkHoverDecoration: underline;
 // Flex Layout:
 // Gap/margin between our flex items
 $flexGap: 18px;

@@ -5,11 +5,11 @@ button,
     -moz-appearance: none;
     appearance: none;
     cursor: pointer;
-    background: $brand-main;
-    border: 1px solid $brand-main;
+    background: $brandMain;
+    border: 1px solid $brandMain;
     border-radius: 30px;
     padding: 0.6rem 1.8rem;
-    color: $brand-main-complement;
+    color: $brandMainComplement;
     transition: all 0.3s ease;
     display: inline-block;
     margin-top: 1em;
@@ -22,16 +22,16 @@ button,
     justify-content: center;
     &:hover {
         // background-color: $offBlack;
-        color: lighten($brand-main-complement, 10%);
-        background: lighten($brand-main, 10%);
-        border: 1px solid lighten($brand-main, 10%);
+        color: lighten($brandMainComplement, 10%);
+        background: lighten($brandMain, 10%);
+        border: 1px solid lighten($brandMain, 10%);
         text-decoration: none;
     }
     &-outline {
         @extend .btn;
         background: none;
-        color: $brand-main;
-        border: 1px solid $brand-main;
+        color: $brandMain;
+        border: 1px solid $brandMain;
     }
 }
 

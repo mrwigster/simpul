@@ -26,7 +26,7 @@
 .card-blocks {
     padding: 4em 0;
     position: relative;
-    background: linear-gradient(to bottom, $brand-main-complement 0%, #fff 100%);
+    background: linear-gradient(to bottom, $brandMainComplement 0%, #fff 100%);
     .container {
         margin-top: -180px;
         @include wide() {
@@ -43,10 +43,10 @@
     margin-bottom: -40px;
     &[data-current="grid"] {
         .grid {
-            background-color: darken($brand-main, 10);
+            background-color: darken($brandMain, 10);
         }
         .flex {
-            background: $brand-main;
+            background: $brandMain;
         }
     }
 }
@@ -54,13 +54,13 @@
 .demo-flex-switcher {
     display: inline-block;
     padding: 1rem;
-    background: $brand-main;
+    background: $brandMain;
     color: white;
     cursor: pointer;
     &.flex {
         border-radius: 20px 0 0 20px;
-        border-right: 1px solid $brand-secondary;
-        background-color: darken($brand-main, 10);
+        border-right: 1px solid $brandSecondary;
+        background-color: darken($brandMain, 10);
     }
     &.grid {
         border-radius: 0 20px 20px 0;

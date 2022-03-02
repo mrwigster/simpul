@@ -42,7 +42,7 @@
     position: absolute;
     bottom: 1em;
     right: 1em;
-    color: $brand-main-complement;
+    color: $brandMainComplement;
     z-index: 5;
 }
 
@@ -77,18 +77,18 @@
         z-index: 2;
         position: relative;
         height: 100%;
-        color: $brand-main-complement;
+        color: $brandMainComplement;
     }
     p {
         width: 100%;
     }
     .btn {
-        color: $brand-main-complement;
-        border-color: $brand-main-complement;
+        color: $brandMainComplement;
+        border-color: $brandMainComplement;
         &:hover {
-            background-color: $brand-main;
-            color: $brand-main-complement;
-            border-color: $brand-main-complement;
+            background-color: $brandMain;
+            color: $brandMainComplement;
+            border-color: $brandMainComplement;
         }
     }
 }

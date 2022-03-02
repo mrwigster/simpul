@@ -2,25 +2,23 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 8em 0 10em;
+    padding: 4rem 0 5rem;
     position: relative;
-    min-height: 700px;
+    // min-height: 500px;
+    background-color: $brandMain;
     @include mobile() {
         padding: 3em 0;
         min-height: 40vh;
     }
-    @include wide() {
-        min-height: 800px;
-    }
     .hero-content {
         display: inline-block;
-        padding: 2em 2em 2em 0;
-        margin: $flexGap / 2;
+        width: 100%;
         @include mobile() {
             padding: 0.5em;
         }
         h1,
-        h2 {
+        h2,
+        p {
             margin-top: 0;
             margin-bottom: 0.5em;
             color: white;
@@ -31,16 +29,38 @@
             margin-bottom: 0;
         }
     }
-    &.background-image {
-        background-color: $brand-secondary;
-        background-image: url(/img/example.jpeg);
+}
+
+.inner-hero {
+    padding: 3rem 0;
+    min-height: auto;
+    .hero-content {
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
     }
 }
 
-.has-background-image {
-    background-color: $offBlack;
-    .background-video {
-        display: none;
+.background-media-shade {
+    background-color: transparent;
+    &::after {
+        content: "";
+        background-color: rgba($brandMain, $alpha: 0.75);
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
+    .container {
+        position: relative;
+        z-index: 2;
     }
 }
 

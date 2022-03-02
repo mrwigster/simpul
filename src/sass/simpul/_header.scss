@@ -69,7 +69,7 @@ header.site-header {
     &__icon {
         width: 25px;
         height: 2px;
-        background: $brand-main;
+        background: $brandMain;
         display: block;
         transition: height 0.1s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
         &::after,
@@ -77,7 +77,7 @@ header.site-header {
             content: " ";
             width: 25px;
             height: 2px;
-            background: $brand-main;
+            background: $brandMain;
             display: block;
             position: relative;
             top: 6px;

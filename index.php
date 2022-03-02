@@ -4,18 +4,18 @@ $metaDescription = 'My Site built using the simpul framework/starter template';
 include $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
 ?>
 
-<section class="simpul-hero home">
+<section class="simpul-hero home background-media-shade">
     <div class="container">
-        <div class="hero-content">
-            <h1>simpul</h1>
-            <h2>Super clean, lightweight starting point for website developers</h2>
-            <a href="https://github.com/mrwigster/simpul" class="btn">One clear CTA</a>
+        <div class="hero-content flex-wrap">
+            <div class="half">
+                <h1>simpul</h1>
+                <h2>Super clean, lightweight starting point for website developers</h2>
+                <a href="https://github.com/mrwigster/simpul" class="btn">One clear CTA</a>
+            </div>
         </div>
     </div>
     <aside class="background-video">
-        <video autoplay playsinline loop mute>
-            <source src="/videos/forest-drone.mp4" type="video/mp4">
-        </video>
+        <video autoplay playsinline loop muted src="/videos/forest-drone.mp4" type="video/mp4"></video>
     </aside>
 </section>
 

@@ -1,6 +1,6 @@
 footer.site-footer {
-    background-color: $brand-main;
-    color: $brand-secondary;
+    background-color: $brandMain;
+    color: $brandSecondary;
     margin-top: 2rem;
     padding: 3rem 0;
     font-size: 1rem;
@@ -43,14 +43,14 @@ footer.site-footer {
     }
     .newsletter {
         input {
-            background: $brand-main;
+            background: $brandMain;
             border: none;
-            border-bottom: 1px solid $brand-main-complement;
+            border-bottom: 1px solid $brandMainComplement;
             width: 100%;
             margin-top: 1em;
             padding: 0.5em 0;
             font-size: 1em;
-            color: $brand-main-complement;
+            color: $brandMainComplement;
             &:focus {
                 outline: none;
             }

@@ -7,7 +7,7 @@ body {
 body {
     font-family: $contentFonts;
     font-weight: $contentFontsWeight;
-    color: $brand-main;
+    color: $fontColor;
     text-rendering: optimizeLegibility;
 }
 
@@ -65,12 +65,12 @@ h6 {
 }
 
 a {
-    color: $link-color;
-    text-decoration: $link-decoration;
+    color: $linkColor;
+    text-decoration: $linkDecoration;
     text-decoration-skip-ink: auto;
     &:hover {
-        color: $link-hover-color;
-        text-decoration: $link-hover-decoration;
+        color: $linkHoverColor;
+        text-decoration: $linkHoverDecoration;
     }
 }
 
@@ -120,9 +120,9 @@ pre {
     code {
         padding: 1rem;
         display: block;
-        background: $brand-main;
+        background: $brandMain;
         border-radius: 3px;
-        border-top: 10px solid $brand-secondary;
+        border-top: 10px solid $brandSecondary;
         font-size: 20px;
         overflow: scroll;
         color: white;
