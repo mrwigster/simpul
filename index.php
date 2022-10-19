@@ -219,8 +219,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
             </div>
             <label class="third" for="name">
                 <div>Radios:</div>
-                <input type="radio" id="radioone" value="radio 1"><label for="radioone">Radio 1</label>
-                <input type="radio" id="radiotwo" value="radio 2"><label for="radiotwo">Radio 2</label>
+                <input type="radio" id="radioone" name="radioexample" value="radio 1"><label for="radioone">Radio 1</label>
+                <input type="radio" id="radiotwo" name="radioexample" value="radio 2"><label for="radiotwo">Radio 2</label>
             </label>
             <label class="third" for="select">
                 Select:

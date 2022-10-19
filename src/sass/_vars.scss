@@ -35,7 +35,7 @@ $linkDecoration: none;
 $linkHoverDecoration: underline;
 // Flex Layout:
 // Gap/margin between our flex items
-$flexGap: 18px;
+$flexGap: $baseFontSize;
 // Grid Layout:
 // Control the number of columns our grid has, it truly only really works with 12
 $gridColumns: 12;

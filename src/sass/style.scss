@@ -8,8 +8,10 @@
 @import "simpul/norm";
 // Media query setup
 @import "simpul/mediaq";
-// Useful little bits
+// Useful utility classes bits [center / align]
 @import "simpul/utils";
+// Extra / bonus features to enhance browsers, possibly bleeding edge features§
+@import "simpul/extras";
 // A simple accordion
 @import "simpul/accordion";
 // A simple slider
@@ -38,8 +40,6 @@
 @import "simpul/card";
 // Basic blog styles
 @import "blog";
-
-
 // Homepage/Demo styles
 // Delete or re:use
 @import "demo";

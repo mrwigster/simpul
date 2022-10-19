@@ -9,12 +9,12 @@
     },
     "license": "ISC",
     "devDependencies": {
-        "@babel/core": "^7.17.5",
-        "@babel/preset-env": "^7.16.11",
+        "@babel/core": "^7.19.3",
+        "@babel/preset-env": "^7.19.4",
         "autoprefixer": "^10.4.2",
-        "browser-sync": "^2.27.7",
-        "cssnano": "^5.1.0",
-        "del": "^6.0.0",
+        "browser-sync": "^2.27.10",
+        "cssnano": "^5.1.13",
+        "del": "^6.1.1",
         "gulp": "^4.0.2",
         "gulp-babel": "^8.0.0",
         "gulp-clean-css": "^4.3.0",
@@ -24,7 +24,6 @@
         "gulp-sass": "^5.1.0",
         "gulp-sourcemaps": "^3.0.0",
         "gulp-uglify": "^3.0.2",
-        "sass": "^1.49.9"
-    },
-    "dependencies": {}
+        "sass": "^1.55.0"
+    }
 }
