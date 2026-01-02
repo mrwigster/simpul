@@ -1,42 +1,132 @@
+// SCSS Variables (for build-time calculations)
 $brandMain: #003a42;
+
 // brandMain-complement should contrast well against brandMain (Eg, text on buttons).
 $brandMainComplement: #ebebeb;
 $brandSecondary: #464646;
-$brandSecondaryComplement: #ffffff;
+$brandSecondaryComplement: #fff;
 $offWhite: #e3e3e3;
 $offBlack: #464646;
+
 // Typography basics
-$fontColor: #000000;
-$contentFonts: "PT Sans",
-arial,
-sans-serif;
+$fontColor: #000;
+$contentFonts: "PT Sans", arial, sans-serif;
 $contentFontsWeight: 400;
-$headingFonts: "Heebo",
-arial,
-sans-serif;
+$headingFonts: "Heebo", arial, sans-serif;
 $headingFontsWeight: 700;
+
 // Applied to body, sets the basis for all the em/rems on the site
 $baseFontSize: 18px;
+
 // Breakpoint we consider largest size for a mobile
 $mobile-width: 475px;
+
 // Minimum breakpoint to consider a tablet
 $tablet-width: 768px;
+
 // Minimum breakpoint to consider a desktop
 $desktop-width: 1024px;
+
 // For wide screen
 $wide-width: 1480px;
+
 // Sets the maximum width a container will go to, we don't want really long lines of text the complete width of a widescreen browser
 $containedWidth: 1024px;
 $constrainContainedWidth: 1024px;
+
 // Basic link controls
 $linkColor: $brandMain;
 $linkHoverColor: $brandSecondary;
 $linkDecoration: none;
 $linkHoverDecoration: underline;
+
 // Flex Layout:
 // Gap/margin between our flex items
 $flexGap: $baseFontSize;
+
 // Grid Layout:
 // Control the number of columns our grid has, it truly only really works with 12
 $gridColumns: 12;
 $gridGap: $flexGap;
+
+// CSS Custom Properties (for runtime theming and better browser support)
+:root {
+  // Brand Colors
+  --color-brand-primary: #{$brandMain};
+  --color-brand-primary-contrast: #{$brandMainComplement};
+  --color-brand-secondary: #{$brandSecondary};
+  --color-brand-secondary-contrast: #{$brandSecondaryComplement};
+  --color-neutral-100: #{$offWhite};
+  --color-neutral-900: #{$offBlack};
+  --color-text-primary: #{$fontColor};
+
+  // Typography
+  --font-family-content: #{$contentFonts};
+  --font-weight-content: #{$contentFontsWeight};
+  --font-family-heading: #{$headingFonts};
+  --font-weight-heading: #{$headingFontsWeight};
+  --font-size-base: #{$baseFontSize};
+
+  // Typography Scale (using modern fluid typography)
+  --font-size-xs: clamp(0.75rem, 0.8vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.9vw, 1rem);
+  --font-size-md: clamp(1rem, 1.125vw, #{$baseFontSize});
+  --font-size-lg: clamp(1.125rem, 1.25vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.5vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 2vw, 2rem);
+  --font-size-3xl: clamp(2rem, 2.5vw, 2.5rem);
+  --font-size-4xl: clamp(2.5rem, 3vw, 3rem);
+
+  // Spacing Scale
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  // Layout
+  --container-max-width: #{$containedWidth};
+  --container-padding: var(--space-md);
+  --gap-flex: var(--space-md);
+  --gap-grid: var(--space-md);
+
+  // Breakpoints (for container queries)
+  --breakpoint-mobile: #{$mobile-width};
+  --breakpoint-tablet: #{$tablet-width};
+  --breakpoint-desktop: #{$desktop-width};
+  --breakpoint-wide: #{$wide-width};
+
+  // Links
+  --color-link: var(--color-brand-primary);
+  --color-link-hover: var(--color-brand-secondary);
+
+  // Shadows and Effects
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 10%),
+    0 4px 6px -4px rgb(0 0 0 / 10%);
+
+  // Border radius
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  // Transitions
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #{$brandMainComplement};
+    --color-neutral-100: #{$offBlack};
+    --color-neutral-900: #{$offWhite};
+
+    // Add more dark mode overrides as needed
+  }
+}

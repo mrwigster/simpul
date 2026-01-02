@@ -1,21 +1,26 @@
 .simpul-hero {
+    position: relative;
+    padding: 4rem 0 5rem;
+
+    // min-height: 500px;
+    background-color: $brandMain;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 4rem 0 5rem;
-    position: relative;
-    // min-height: 500px;
-    background-color: $brandMain;
-    @include mobile() {
-        padding: 3em 0;
+
+    @include mobile {
         min-height: 40vh;
+        padding: 3em 0;
     }
+
     .hero-content {
         display: inline-block;
         width: 100%;
-        @include mobile() {
+
+        @include mobile {
             padding: 0.5em;
         }
+
         h1,
         h2,
         p {
@@ -23,41 +28,46 @@
             margin-bottom: 0.5em;
             color: white;
         }
+
         .btn {
-            font-size: 1.5em;
             margin-top: 1em;
             margin-bottom: 0;
+            font-size: 1.5em;
         }
     }
 }
 
 .inner-hero {
-    padding: 3rem 0;
     min-height: auto;
+    padding: 3rem 0;
+
     .hero-content {
         h1 {
             margin-bottom: 1rem;
             font-size: 2rem;
         }
+
         h2 {
-            font-size: 1.25rem;
             margin-bottom: 1rem;
+            font-size: 1.25rem;
         }
     }
 }
 
 .background-media-shade {
     background-color: transparent;
+
     &::after {
-        content: "";
-        background-color: rgba($brandMain, $alpha: 0.75);
         position: absolute;
         top: 0;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
         z-index: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($brandMain, $alpha: 0.75);
+        content: "";
+        overflow: hidden;
     }
+
     .container {
         position: relative;
         z-index: 2;
@@ -67,10 +77,11 @@
 .background-video {
     position: absolute;
     top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
     z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
     video {
         width: 100%;
         height: 100%;

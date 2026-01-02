@@ -4,7 +4,7 @@
 
 A simple and very effective starter framework.
 
-gulp4 is at the core to power the sass/css, babel and minification of JS—as well as create a simple PHP server and live-reloading with browsersync.
+gulp 5 is at the core to power the sass/css and minification of JS—as well as create a simple PHP server and live-reloading with browsersync.
 
 By default it has the header/footer/menu includes that 99% of most websites will utilise as well as some basic styling to help you get your project/site/app off the ground very quickly.
 

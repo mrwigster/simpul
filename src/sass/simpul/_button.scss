@@ -1,41 +1,44 @@
 button,
 .button,
 .btn {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
+    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.6rem 1.8rem;
+    font-size: 1em;
+    text-align: center;
+    color: $brandMainComplement;
     background: $brandMain;
     border: 1px solid $brandMain;
     border-radius: 30px;
-    padding: 0.6rem 1.8rem;
-    color: $brandMainComplement;
     transition: all 0.3s ease;
-    display: inline-block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    text-align: center;
-    font-size: 1em;
+    appearance: none;
+    cursor: pointer;
     white-space: nowrap;
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
+
     &:hover {
+        text-decoration: none;
+
         // background-color: $offBlack;
         color: lighten($brandMainComplement, 10%);
         background: lighten($brandMain, 10%);
         border: 1px solid lighten($brandMain, 10%);
-        text-decoration: none;
     }
+
     &-outline {
         @extend .btn;
-        background: none;
+
         color: $brandMain;
+        background: none;
         border: 1px solid $brandMain;
     }
 }
 
 input[type="submit"] {
     @extend .btn;
+
     margin-bottom: 0;
 }

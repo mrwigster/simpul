@@ -20,6 +20,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+
     .left-panel,
     .right-panel {
         position: absolute;
@@ -28,10 +29,12 @@
         height: 100%;
         z-index: 2;
     }
+
     .left-panel {
         cursor: w-resize;
         left: 0;
     }
+
     .right-panel {
         cursor: e-resize;
         right: 0;
@@ -54,6 +57,7 @@
     top: 0;
     left: 0;
     z-index: 0;
+
     &::before {
         content: "";
         position: absolute;
@@ -62,16 +66,19 @@
         left: 0;
         top: 0;
         z-index: 1;
-        background: rgba(0, 0, 0, 0.65);
+        background: rgb(0 0 0 / 65%);
     }
+
     .simpul-slide-content {
         display: flex;
         flex-wrap: wrap;
         align-content: center;
     }
+
     .container {
         padding: 0 10%;
     }
+
     .container,
     .simpul-slide-content {
         z-index: 2;
@@ -79,12 +86,15 @@
         height: 100%;
         color: $brandMainComplement;
     }
+
     p {
         width: 100%;
     }
+
     .btn {
         color: $brandMainComplement;
         border-color: $brandMainComplement;
+
         &:hover {
             background-color: $brandMain;
             color: $brandMainComplement;

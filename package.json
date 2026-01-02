@@ -1,29 +1,35 @@
 {
-    "name": "simpul",
-    "version": "1.1.5",
-    "description": "simpul - a great template and framework to begin most typical modern PHP websites | By Alex of @guwii (guwii.com)",
-    "author": "@guwii",
-    "main": "gulpfile.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "license": "ISC",
-    "devDependencies": {
-        "@babel/core": "^7.19.3",
-        "@babel/preset-env": "^7.19.4",
-        "autoprefixer": "^10.4.2",
-        "browser-sync": "^2.27.10",
-        "cssnano": "^5.1.13",
-        "del": "^6.1.1",
-        "gulp": "^4.0.2",
-        "gulp-babel": "^8.0.0",
-        "gulp-clean-css": "^4.3.0",
-        "gulp-concat": "^2.6.1",
-        "gulp-connect-php": "^1.0.3",
-        "gulp-postcss": "^9.0.1",
-        "gulp-sass": "^5.1.0",
-        "gulp-sourcemaps": "^3.0.0",
-        "gulp-uglify": "^3.0.2",
-        "sass": "^1.55.0"
-    }
+  "type": "module",
+  "name": "simpul",
+  "version": "1.1.6",
+  "description": "simpul - a great template and framework to begin most typical modern PHP websites | By Alex of @guwii (guwii.com)",
+  "author": "@guwii",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp",
+    "build": "gulp production",
+    "lint:css": "stylelint \"src/sass/**/*.scss\" --fix",
+    "lint:css:check": "stylelint \"src/sass/**/*.scss\""
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "browser-sync": "^3.0.4",
+    "cssnano": "^7.1.2",
+    "del": "^8.0.1",
+    "gulp": "^5.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "postcss-custom-properties": "^14.0.6",
+    "postcss-logical": "^8.1.0",
+    "postcss-preset-env": "^10.6.0",
+    "sass": "^1.97.1",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-order": "^7.0.1"
+  }
 }

@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="all">
   <link href="https://fonts.googleapis.com/css?family=Heebo:700|PT+Sans" rel="stylesheet">
@@ -21,10 +21,10 @@
 <body>
   <header class="site-header">
     <div class="flex-wrap container">
-      <a href="/" class="logo">
+      <a href="/" class="logo third col-m-6" id="site-logo" aria-label="<?php echo $prettyName; ?> home">
         <img src="/img/simpul-logo.svg" alt="<?php echo $prettyName; ?> logo">
       </a>
-      <nav class="menu" id="site-navigation" role="navigation">
+      <nav class="menu twothird col-m-6" id="site-navigation" role="navigation">
         <?php include $_SERVER["DOCUMENT_ROOT"] . '/inc/menu.php'; ?>
       </nav>
     </div>

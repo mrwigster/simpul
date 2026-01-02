@@ -1,66 +1,79 @@
 footer.site-footer {
-    background-color: $brandMain;
-    color: $brandSecondary;
     margin-top: 2rem;
     padding: 3rem 0;
     font-size: 1rem;
+    color: $brandSecondary;
+    background-color: $brandMain;
+
     a {
         display: block;
         width: 100%;
-        color: $offWhite;
         margin: 0 0 0.8em;
+        color: $offWhite;
+
         &:hover {
             color: white;
         }
-        @include mobile() {
+
+        @include mobile {
             padding: 0.5em 0;
         }
     }
+
     p {
-        color: $offWhite;
-        margin: 0;
         width: 100%;
-    }
-    h2 {
-        font-size: 1.2rem;
-        margin: 0 0 1rem 0;
+        margin: 0;
         color: $offWhite;
     }
+
+    h2 {
+        margin: 0 0 1rem;
+        font-size: 1.2rem;
+        color: $offWhite;
+    }
+
     .footer-section {
         display: flex;
         flex-wrap: wrap;
         align-content: flex-start;
+
         a.logo {
             display: block;
             max-width: 200px;
-            @include lessThanTablet() {
+
+            @include lessThanTablet {
                 margin: auto;
             }
         }
-        @include lessThanTablet() {
+
+        @include lessThanTablet {
             text-align: center;
         }
     }
+
     .newsletter {
         input {
-            background: $brandMain;
-            border: none;
-            border-bottom: 1px solid $brandMainComplement;
             width: 100%;
             margin-top: 1em;
             padding: 0.5em 0;
             font-size: 1em;
             color: $brandMainComplement;
+            background: $brandMain;
+            border: none;
+            border-bottom: 1px solid $brandMainComplement;
+
             &:focus {
                 outline: none;
             }
         }
     }
+
     .copyright {
         width: 100%;
         font-size: 0.8em;
         color: darken($offWhite, 20);
     }
+
     .social-icons {
         width: 100%;
     }

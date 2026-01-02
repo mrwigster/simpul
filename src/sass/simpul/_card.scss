@@ -2,34 +2,42 @@
     background: white;
     border-radius: 3px;
     transition: all 0.5s ease;
+
     &:hover {
         text-decoration: none;
         transform: scale(1.015);
     }
+
     >a {
         display: block;
+
         &:hover {
             text-decoration: none;
         }
+
         >* {
             padding: 1rem;
         }
+
         >img {
-            padding: 0;
             margin-bottom: 1em;
+            padding: 0;
         }
     }
+
     .card-title {
-        font-size: 1.5em;
         margin: 0 auto;
+        font-size: 1.5em;
     }
+
     p {
         position: relative;
+        margin: 0 0 1em;
         padding: 0 1em;
-        margin: 0 0 1em 0;
     }
+
     .btn {
-        padding: 0.6rem 1.8rem;
         margin: 0 0 1rem 1rem;
+        padding: 0.6rem 1.8rem;
     }
 }

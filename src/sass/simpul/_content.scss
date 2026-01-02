@@ -1,15 +1,15 @@
 .divider {
-    height: 1px;
     width: 100%;
     width: calc(100% - #{$flexGap});
-    background-color: $offWhite;
+    height: 1px;
     margin: 6rem auto;
+    background-color: $offWhite;
 }
 
 .inline-text-btn {
-    text-align: center;
-    font-weight: 400;
     display: block;
     margin: auto;
     font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
 }

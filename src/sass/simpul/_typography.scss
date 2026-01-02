@@ -8,7 +8,7 @@ body {
     font-family: $contentFonts;
     font-weight: $contentFontsWeight;
     color: $fontColor;
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizelegibility;
 }
 
 h1,
@@ -17,45 +17,50 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $headingFonts;
-    font-weight: $headingFontsWeight;
     display: block;
     width: 100%;
+    margin: 0 0 1em;
+    font-family: $headingFonts;
+    font-weight: $headingFontsWeight;
     line-height: 1em;
-    margin: 0 0 1em 0;
 }
 
 h1 {
     font-size: 3em;
-    @include lessThanTablet() {
+
+    @include lessThanTablet {
         font-size: 2.3em;
     }
 }
 
 h2 {
     font-size: 2.4em;
-    @include lessThanTablet() {
+
+    @include lessThanTablet {
         font-size: 2em;
     }
 }
 
 h3 {
     font-size: 1.8em;
-    @include lessThanTablet() {
+
+    @include lessThanTablet {
         font-size: 1.5em;
     }
 }
 
 h4 {
     font-size: 1.4em;
-    @include lessThanTablet() {
+
+    @include lessThanTablet {
         font-size: 1.3em;
     }
 }
 
 h5 {
     font-size: 1.2em;
-    @include lessThanTablet() {
+
+    @include lessThanTablet {
         font-size: 1.1em;
     }
 }
@@ -65,12 +70,13 @@ h6 {
 }
 
 a {
-    color: $linkColor;
     text-decoration: $linkDecoration;
+    color: $linkColor;
     text-decoration-skip-ink: auto;
+
     &:hover {
-        color: $linkHoverColor;
         text-decoration: $linkHoverDecoration;
+        color: $linkHoverColor;
     }
 }
 
@@ -81,11 +87,12 @@ p {
 }
 
 blockquote {
-    border-left: 10px solid $offBlack;
+    position: relative;
     margin-left: 0;
     padding: 1.5em;
-    position: relative;
-    &:after {
+    border-left: 10px solid $offBlack;
+
+    &::after {
         content: "”";
         position: absolute;
         top: 0;
@@ -102,29 +109,29 @@ ol {
 }
 
 mark {
-    background: rgba(204, 146, 79, 0.13);
-    padding: 2px 5px;
-    border-radius: 3px;
     margin: 0 2px;
+    padding: 2px 5px;
+    background: rgb(204 146 79 / 13%);
+    border-radius: 3px;
 }
 
 p code {
-    background: $offWhite;
     display: inline-block;
+    padding: 0 10px;
+    background: $offWhite;
     border: 1px dashed $offWhite;
     border-radius: 6px;
-    padding: 0 10px;
 }
 
 pre {
     code {
-        padding: 1rem;
         display: block;
+        padding: 1rem;
+        font-size: 20px;
+        color: white;
         background: $brandMain;
         border-radius: 3px;
         border-top: 10px solid $brandSecondary;
-        font-size: 20px;
         overflow: scroll;
-        color: white;
     }
 }

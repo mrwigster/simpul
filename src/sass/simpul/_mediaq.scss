@@ -1,41 +1,135 @@
+// Responsive images and media
 iframe,
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-@mixin desktop {
-    @media (min-width: #{$desktop-width}) {
-        @content;
-    }
-}
-
-@mixin wide {
-    @media (min-width: #{$wide-width}) {
-        @content;
-    }
-}
-
-@mixin lessThanDesktop {
-    @media (max-width: #{$desktop-width - 1px}) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-        @content;
-    }
-}
-
-@mixin lessThanTablet {
-    @media (max-width: #{$tablet-width - 1px}) {
-        @content;
-    }
+// Modern breakpoint mixins using custom properties
+@mixin mobile-only {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
 }
 
 @mixin mobile {
-    @media (max-width: #{$mobile-width}) {
-        @content;
-    }
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: #{$wide-width}) {
+    @content;
+  }
+}
+
+// Legacy aliases for backward compatibility
+@mixin lessThanDesktop {
+  @include tablet-down {
+    @content;
+  }
+}
+
+@mixin lessThanTablet {
+  @include mobile {
+    @content;
+  }
+}
+
+// Modern responsive mixins with fluid sizing
+@mixin fluid-size(
+  $min-size,
+  $max-size,
+  $min-viewport: 320px,
+  $max-viewport: 1440px
+) {
+  font-size: clamp(
+    #{$min-size},
+    #{$min-size} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-viewport}) /
+          (#{$max-viewport} - #{$min-viewport})),
+    #{$max-size}
+  );
+}
+
+// Container query mixins (for modern browsers)
+@mixin container($size) {
+  @container (min-width: #{$size}) {
+    @content;
+  }
+}
+
+@mixin container-mobile {
+  @container (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin container-tablet {
+  @container (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin container-desktop {
+  @container (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+// Reduced motion support
+@mixin motion-safe {
+  @media (prefers-reduced-motion: no-preference) {
+    @content;
+  }
+}
+
+@mixin motion-reduce {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+// High contrast support
+@mixin high-contrast {
+  @media (prefers-contrast: high) {
+    @content;
+  }
+}
+
+// Print styles
+@mixin print {
+  @media print {
+    @content;
+  }
 }
